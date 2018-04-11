@@ -4,14 +4,69 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Godisautomat.Pages"
+      xmlns:c="clr-namespace:Godisautomat.Controls"
       xmlns:viewmodels="clr-namespace:Godisautomat.ViewModels"
       x:Name="Page"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920">
+      d:DesignHeight="768" d:DesignWidth="1366">
 
-    <WrapPanel Name="ButtonContainer"
-               Orientation="Horizontal">
+    <Grid Background="{StaticResource MainBrush}">
 
-    </WrapPanel>
-    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="105"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <c:TitleBar Grid.Row="0"
+                    Grid.ColumnSpan="2"/>
+
+        <Button Style="{StaticResource Back}"
+                Grid.Row="1"
+                VerticalAlignment="Top"
+                Margin="0, 17, 0, 0"
+                Command="{Binding BackCommand}"/>
+
+        <Border Grid.Column="1"
+                Grid.Row="1"
+                Margin="0, 10, 52, 10"
+                CornerRadius="8"
+                BorderBrush="{StaticResource AccentBrush}"
+                Background="{StaticResource AccentBrush}">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0"
+                        Background="{StaticResource BackgroundBrush}"
+                        BorderBrush="{StaticResource BackgroundBrush}"
+                        CornerRadius="8, 8, 0, 0" 
+                        Margin="29, 12, 29, 0">
+
+                    <Label Content="{Binding CandyTypeName, FallbackValue=Chocolate}"
+                           FontFamily="Montserrat"
+                           FontSize="48"
+                           FontWeight="DemiBold" 
+                           Foreground="{StaticResource TextBrush}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+
+                </Border>
+
+                <WrapPanel Grid.Row="1"
+                       Name="ButtonContainer"
+                       Orientation="Horizontal"/>
+
+            </Grid>
+        </Border>
+        
+    </Grid>
+
 </local:BasePage>

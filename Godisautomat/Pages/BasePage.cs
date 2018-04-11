@@ -29,12 +29,12 @@ namespace Godisautomat.Pages
         /// <summary>
         /// The animation the play when the page is first loaded
         /// </summary>
-        public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideAndFadeInFromRight;
+        public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideInFromRight;
 
         /// <summary>
         /// The animation the play when the page is unloaded
         /// </summary>
-        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToLeft;
+        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideOutToLeft;
 
         /// <summary>
         /// The time any slide animation takes to complete
@@ -124,11 +124,18 @@ namespace Godisautomat.Pages
 
             switch (PageLoadAnimation)
             {
-                case PageAnimation.SlideAndFadeInFromRight:
+                case PageAnimation.SlideInFromRight:
 
                     // Start the animation
-                    await this.SlideAndFadeInAsync(AnimationSlideInDirection.Right, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width);
+                    await this.SlideAndFadeInAsync(AnimationSlideInDirection.Right, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width, fade: false);
 
+                    break;
+
+                case PageAnimation.SlideInFromLeft:
+
+                    // Start the animation
+                    await this.SlideAndFadeInAsync(AnimationSlideInDirection.Left, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width, fade: false);
+                    
                     break;
             }
         }
@@ -145,10 +152,17 @@ namespace Godisautomat.Pages
 
             switch (PageUnloadAnimation)
             {
-                case PageAnimation.SlideAndFadeOutToLeft:
+                case PageAnimation.SlideOutToLeft:
 
                     // Start the animation
-                    await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Left, SlideSeconds);
+                    await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Left, SlideSeconds, fade: false);
+
+                    break;
+
+                case PageAnimation.SlideOutToRight:
+
+                    // Start the animation
+                    await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Right, SlideSeconds, fade: false);
 
                     break;
             }

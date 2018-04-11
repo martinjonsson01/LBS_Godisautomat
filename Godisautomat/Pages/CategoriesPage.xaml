@@ -9,54 +9,37 @@
       x:Name="Page"
       mc:Ignorable="d" 
       SnapsToDevicePixels="True"
-      d:DesignHeight="1080" d:DesignWidth="1920">
+      d:DesignHeight="768" d:DesignWidth="1366">
 
     <Grid>
 
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform Angle="290" CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+
+                <GradientStop Color="#8cd6f7" Offset="0"/>
+                <GradientStop Color="{StaticResource Main}" Offset="0.567"/>
+
+            </LinearGradientBrush>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="150" />
+            <RowDefinition Height="105" />
             <RowDefinition Height="930" />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0"
-              Background="{StaticResource BackgroundBrush}">
-            <Image Source="/Images/Logo.png"
-                   Margin="32, 0, 0, 0"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   RenderOptions.BitmapScalingMode="HighQuality"
-                   RenderOptions.EdgeMode="Aliased"
-                   Stretch="None"/>
-            <Label Grid.Row="0"
-                   FontFamily="Montserrat"
-                   FontWeight="Bold"
-                   FontSize="100"
-                   Content="Candymachine™©"
-                   Foreground="{StaticResource TextBrush}"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
-        </Grid>
+        <c:TitleBar/>
 
         <c:CategoriesHolder Grid.Row="1">
             
-            <c:CategoriesHolder.Background>
-                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
-                    
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform Angle="290" CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    
-                    <GradientStop Color="#8cd6f7" Offset="0"/>
-                    <GradientStop Color="{StaticResource Main}" Offset="0.567"/>
-                    
-                </LinearGradientBrush>
-            </c:CategoriesHolder.Background>
-
         </c:CategoriesHolder>
 
     </Grid>

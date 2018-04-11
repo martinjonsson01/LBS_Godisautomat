@@ -19,14 +19,39 @@ namespace Godisautomat.ViewModels
 
         public CandyType Type { get; set; }
 
+        public string IngredientNames {
+            get
+            {
+                var names = "Contains:\n";
+                foreach (var ingredient in Type.Ingredients)
+                {
+                    names += $"{ingredient.Name}, ";
+                }
+                return names;
+            }
+        }
+
+        public List<Ingredient> AllergicIngredients
+        {
+            get
+            {
+                var allergicIngredients = new List<Ingredient>();
+                foreach (var ingredient in Type.Ingredients)
+                {
+                    if (ingredient.IsAllergic)
+                        allergicIngredients.Add(ingredient);
+                }
+                return allergicIngredients;
+            }
+        }
+
         #endregion
 
         #region Commands
+        
+        public ICommand BackCommand { get; set; }
 
-        /// <summary>
-        /// The command to open CandyTypes page.
-        /// </summary>
-        public ICommand SelectCandyTypeCommand { get; set; }
+        public ICommand BuyCommand { get; set; }
 
         #endregion
 
@@ -45,17 +70,11 @@ namespace Godisautomat.ViewModels
             Type = type;
 
             // Create commands
-            //SelectCandyTypeCommand = new RelayParameterizedCommand(async (parameter) => await SelectCandyTypeAsync(parameter));
+            BackCommand = new RelayCommand(() => IoC.Application.GoToPage(ApplicationPage.CandyTypes, new CandyTypesViewModel(Type.Category)));
+            //BuyCommand = new RelayCommand(() => IoC.Application.GoToPage(ApplicationPage.Buy, new BuyViewModel(Type)));
         }
 
         #endregion
-
-        /*private async Task SelectCandyTypeAsync(object parameter)
-        {
-            IoC.Application.GoToPage(ApplicationPage.CandyDetails);
-
-            await Task.Delay(1);
-        }*/
-
+        
     }
 }

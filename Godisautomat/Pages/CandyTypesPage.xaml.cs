@@ -28,6 +28,8 @@ namespace Godisautomat.Pages
         /// </summary>
         public CandyTypesPage() : base()
         {
+            PageUnloadAnimation = Animation.PageAnimation.None;
+            PageLoadAnimation = Animation.PageAnimation.SlideInFromLeft;
             InitializeComponent();
         }
 
@@ -36,15 +38,27 @@ namespace Godisautomat.Pages
         /// </summary>
         public CandyTypesPage(CandyTypesViewModel specificViewModel) : base(specificViewModel)
         {
+            PageUnloadAnimation = Animation.PageAnimation.None;
+            PageLoadAnimation = Animation.PageAnimation.SlideInFromLeft;
             InitializeComponent();
 
             foreach (var type in specificViewModel?.Category?.CandyTypes)
             {
+                var leftMargin = 24.0f;
+                var rightMargin = 24.0f;
+                // If first in categories.
+                if (specificViewModel?.Category?.CandyTypes.IndexOf(type) == 0 ||
+                    specificViewModel?.Category?.CandyTypes.IndexOf(type) == 3)
+                {
+                    leftMargin = 29f;
+                    rightMargin = 24.0f;
+                }
+
                 var button = new ButtonCandyType(type)
                 {
-                    Width = 367,
-                    Height = 303,
-                    Margin = new Thickness(70, 20, 70, 20)
+                    Width = 337,
+                    Height = 263,
+                    Margin = new Thickness(leftMargin, 10f, rightMargin, 10f) 
                 };
                 ButtonContainer.Children.Add(button);
             }

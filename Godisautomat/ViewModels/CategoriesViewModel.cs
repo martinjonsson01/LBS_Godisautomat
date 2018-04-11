@@ -16,7 +16,7 @@ namespace Godisautomat.ViewModels
     public class CategoriesViewModel : BaseViewModel
     {
         #region Public Properties
-        
+
         #endregion
 
         #region Commands
@@ -38,7 +38,7 @@ namespace Godisautomat.ViewModels
             // Create commands
             SelectCategoryCommand = new RelayParameterizedCommand(async (parameter) => await SelectCategoryAsync(parameter));
         }
-
+        
         #endregion
 
         private async Task SelectCategoryAsync(object parameter)

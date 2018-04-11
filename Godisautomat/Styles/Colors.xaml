@@ -26,6 +26,9 @@
     <Color x:Key="Background">#FAFAFA</Color>
     <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource Background}"/>
 
+    <Color x:Key="BackgroundDark">#90a4ae</Color>
+    <SolidColorBrush x:Key="BackgroundDarkBrush" Color="{StaticResource BackgroundDark}"/>
+
     <Color x:Key="Text">#4b4b4b</Color>
     <SolidColorBrush x:Key="TextBrush" Color="{StaticResource Text}"/>
 

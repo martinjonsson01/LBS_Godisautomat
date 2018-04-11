@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Godisautomat.Controls.TitleBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Godisautomat.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="105" d:DesignWidth="1366">
+
+    <Grid Grid.Row="0"
+          Background="{StaticResource BackgroundBrush}"
+          Height="105">
+
+        <Grid.Effect>
+            <DropShadowEffect x:Name="dropshadow"
+                              BlurRadius="16"
+                              Direction="270"
+                              Opacity="0.35" 
+                              RenderingBias="Quality"
+                              ShadowDepth="4"/>
+        </Grid.Effect>
+
+        <Image Source="/Images/Logo.png"
+                   Margin="32, 0, 0, 0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   RenderOptions.BitmapScalingMode="HighQuality"
+                   RenderOptions.EdgeMode="Aliased"
+                   Stretch="None"/>
+        <Label Grid.Row="0"
+                   FontFamily="Montserrat"
+                   FontWeight="Bold"
+                   FontSize="60"
+                   Content="Candymachine™©"
+                   Foreground="{StaticResource TextBrush}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+    </Grid>
+
+</UserControl>

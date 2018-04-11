@@ -19,11 +19,21 @@ namespace Godisautomat.Animation
         /// <summary>
         /// The page slides in and fades in from the right
         /// </summary>
-        SlideAndFadeInFromRight = 1,
+        SlideInFromRight = 1,
 
         /// <summary>
         /// The page slides out and fades out to the left
         /// </summary>
-        SlideAndFadeOutToLeft = 2,
+        SlideOutToLeft = 2,
+
+        /// <summary>
+        /// The page slides out and fades out to the right
+        /// </summary>
+        SlideOutToRight = 3,
+
+        /// <summary>
+        /// The page slides in and fades in from the left
+        /// </summary>
+        SlideInFromLeft = 4,
     }
 }

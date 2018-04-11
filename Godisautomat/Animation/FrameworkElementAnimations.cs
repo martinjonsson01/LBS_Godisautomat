@@ -27,7 +27,7 @@ namespace Godisautomat.Animation
         /// <param name="size">The animation width/height to animate to. If not specified the elements size is used</param>
         /// <param name="firstLoad">Indicates if this is the first load</param>
         /// <returns></returns>
-        public static async Task SlideAndFadeInAsync(this FrameworkElement element, AnimationSlideInDirection direction, bool firstLoad, float seconds = 0.3f, bool keepMargin = true, int size = 0)
+        public static async Task SlideAndFadeInAsync(this FrameworkElement element, AnimationSlideInDirection direction, bool firstLoad, float seconds = 0.3f, bool keepMargin = true, int size = 0, bool fade = true)
         {
             // Create the storyboard
             var sb = new Storyboard();
@@ -53,7 +53,8 @@ namespace Godisautomat.Animation
                     break;
             }
             // Add fade in animation
-            sb.AddFadeIn(seconds);
+            if (fade)
+                sb.AddFadeIn(seconds);
 
             // Start animating
             sb.Begin(element);
@@ -75,7 +76,7 @@ namespace Godisautomat.Animation
         /// <param name="keepMargin">Whether to keep the element at the same width during animation</param>
         /// <param name="size">The animation width/height to animate to. If not specified the elements size is used</param>
         /// <returns></returns>
-        public static async Task SlideAndFadeOutAsync(this FrameworkElement element, AnimationSlideInDirection direction, float seconds = 0.3f, bool keepMargin = true, int size = 0)
+        public static async Task SlideAndFadeOutAsync(this FrameworkElement element, AnimationSlideInDirection direction, float seconds = 0.3f, bool keepMargin = true, int size = 0, bool fade = true)
         {
             // Create the storyboard
             var sb = new Storyboard();
@@ -102,7 +103,8 @@ namespace Godisautomat.Animation
             }
 
             // Add fade in animation
-            sb.AddFadeOut(seconds);
+            if (fade)
+                sb.AddFadeOut(seconds);
 
             // Start animating
             sb.Begin(element);

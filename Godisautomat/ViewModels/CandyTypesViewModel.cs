@@ -19,6 +19,8 @@ namespace Godisautomat.ViewModels
         
         public CandyCategory Category { get; set; }
 
+        public string CandyTypeName => Category.Name;
+
         #endregion
 
         #region Commands
@@ -27,6 +29,8 @@ namespace Godisautomat.ViewModels
         /// The command to open CandyTypes page.
         /// </summary>
         public ICommand SelectCandyTypeCommand { get; set; }
+
+        public ICommand BackCommand { get; set; }
 
         #endregion
 
@@ -46,6 +50,7 @@ namespace Godisautomat.ViewModels
 
             // Create commands
             SelectCandyTypeCommand = new RelayParameterizedCommand(async (parameter) => await SelectCandyTypeAsync(parameter));
+            BackCommand = new RelayCommand(() => Back());
         }
 
         #endregion
@@ -55,6 +60,11 @@ namespace Godisautomat.ViewModels
             IoC.Application.GoToPage(ApplicationPage.CandyDetails);
 
             await Task.Delay(1);
+        }
+
+        private void Back()
+        {
+            IoC.Application.GoToPage(ApplicationPage.Categories);
         }
 
     }

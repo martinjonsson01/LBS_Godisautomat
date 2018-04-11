@@ -11,6 +11,8 @@ using Godisautomat.IoCComponents.Interfaces;
 using Godisautomat.TaskComponents;
 using Godisautomat.Helpers.YAML;
 using System.IO;
+using System.Windows.Media.Imaging;
+using System.Net.Cache;
 
 namespace Godisautomat
 {
@@ -19,6 +21,8 @@ namespace Godisautomat
     /// </summary>
     public partial class App : Application
     {
+        private static List<BitmapImage> _cachedImages = new List<BitmapImage>();
+
         /// <summary>
         /// Custom startup so we load our IoC immediately before anything else
         /// </summary>
@@ -30,13 +34,20 @@ namespace Godisautomat
 
             // Setup the main application 
             ApplicationSetupAsync();
-
-            // Log it
-            //IoC.Logger.Log("Application starting...", LogLevel.Debug);
-
-            // Set up YAML config file(s).
-            IoC.Application.CandyCategories = await YamlHelper.SetUpConfigFile($"{AppDomain.CurrentDomain.BaseDirectory}Configs");
             
+            // Set up YAML config file(s).
+            IoC.Application.CandyCategories = await YamlHelper.LoadConfigFile($"{AppDomain.CurrentDomain.BaseDirectory}");
+            
+            // Pre-cache images.
+            foreach (var category in IoC.Application.CandyCategories)
+            {
+                _cachedImages.Add(new BitmapImage(new Uri(category.ImageUrl), new HttpRequestCachePolicy(new DateTime(10000000))));
+                foreach (var type in category.CandyTypes)
+                {
+                    _cachedImages.Add(new BitmapImage(new Uri(type.ImageUrl), new HttpRequestCachePolicy(new DateTime(10000000))));
+                }
+            }
+
             // Setup the application view model.
             IoC.Application.GoToPage(DataModels.ApplicationPage.Categories);
         }

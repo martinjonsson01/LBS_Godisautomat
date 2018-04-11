@@ -7,39 +7,37 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Godisautomat.Pages"
       xmlns:viewmodels="clr-namespace:Godisautomat.ViewModels"
+      xmlns:dm="clr-namespace:Godisautomat.DataModels"
+      xmlns:c="clr-namespace:Godisautomat.Controls"
       x:Name="Page"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920">
+      d:DesignHeight="768" d:DesignWidth="1366">
 
     <Grid Background="{StaticResource MainBrush}">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="150" />
-            <RowDefinition Height="930" />
+            <RowDefinition Height="105" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0"
-              Background="{StaticResource BackgroundBrush}">
-            <Image Source="/Images/Logo.png"
-                   Margin="32, 0, 0, 0"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   RenderOptions.BitmapScalingMode="HighQuality"
-                   RenderOptions.EdgeMode="Aliased"
-                   Stretch="None"/>
-            <Label Grid.Row="0"
-                   FontFamily="Montserrat"
-                   FontWeight="Bold"
-                   FontSize="100"
-                   Content="Candymachine™©"
-                   Foreground="{StaticResource TextBrush}"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
-        </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <c:TitleBar Grid.Row="0"
+                    Grid.ColumnSpan="3"/>
+
+        <Button Style="{StaticResource Back}"
+                Grid.Row="1"
+                VerticalAlignment="Top"
+                Margin="0, 17, 0, 0"
+                Command="{Binding BackCommand}"/>
 
         <Border Name="border"
                 Grid.Row="1"
-                Margin="80, 80, 80, 280"
+                Grid.Column="1"
+                Margin="0, 12, 80, 12"
                 CornerRadius="8"
                 BorderThickness="0"
                 BorderBrush="{StaticResource AccentBrush}"
@@ -53,30 +51,118 @@
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="457"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="5*"/>
                 </Grid.ColumnDefinitions>
-                
-                <Border Grid.Row="1"
-                        Margin="30"
-                        CornerRadius="0, 0, 8, 8"
-                        BorderThickness="0"
-                        BorderBrush="{StaticResource BackgroundBrush}"
-                        Background="{StaticResource BackgroundBrush}">
 
-                    <Label Name="label_title"
+                <StackPanel Grid.Row="1"
+                            Grid.Column="2"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Margin="16, 150, 16, 0">
+
+                    <Button Style="{StaticResource Weight}"
+                            Command="{Binding WeightCommand}"
+                            Content="{Binding Type.Sizes[0]}"/>
+
+                    <Border Background="{StaticResource BackgroundBrush}"
+                            BorderBrush="{StaticResource BackgroundBrush}"
+                            CornerRadius="8, 8, 0, 0" 
+                            Margin="0, 0, 0, -10"
+                            Height="120"
+                            Width="236">
+                        <Label Content="{Binding Type.Price, FallbackValue=220 kr}"
                            FontFamily="Montserrat"
-                           FontWeight="Bold"
-                           FontSize="50"
-                           Padding="0"
+                           FontSize="60"
+                           FontWeight="DemiBold" 
                            Foreground="{StaticResource TextBrush}"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center" 
-                           Content="Test"/>
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                    </Border>
+
+                    <Button Style="{StaticResource Buy}" 
+                        Command="{Binding BuyCommand}"/>
+                    
+
+                </StackPanel>
+                        
+                <Border Grid.Column="1"
+                        Grid.Row="1"
+                        Background="{StaticResource BackgroundBrush}"
+                        BorderBrush="{StaticResource BackgroundBrush}"
+                        CornerRadius="8" 
+                        Margin="16, 50, 0, 32">
+
+                    <ItemsControl ItemsSource="{Binding AllergicIngredients}">
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type dm:Ingredient}">
+                                <Image Source="{Binding WarningImagePath}" 
+                                       Margin="16"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                        
+                    </ItemsControl>
 
                 </Border>
 
+                <Border Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        Background="{StaticResource BackgroundBrush}"
+                        BorderBrush="{StaticResource BackgroundBrush}"
+                        CornerRadius="8, 8, 0, 0" 
+                        Margin="29, 12, 29, 0">
+
+                    <Label Content="{Binding Type.Name, FallbackValue=Chocolate}"
+                           FontFamily="Montserrat"
+                           FontSize="48"
+                           FontWeight="DemiBold" 
+                           Foreground="{StaticResource TextBrush}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+
+                </Border>
+
+                <Grid Grid.Row="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="195" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0"
+                            Margin="30, 16, 0, 0"
+                            CornerRadius="8, 8, 0, 0"
+                            BorderThickness="0">
+                        <Border.Background>
+                            <ImageBrush ImageSource="{Binding Type.ImageUrl, FallbackValue=http://moneyinc.com/wp-content/uploads/2017/07/Chocolate-1024x576.jpg}" />
+                        </Border.Background>
+                    </Border>
+
+                    <Border Grid.Row="1"
+                            Margin="30, 11, 0, 32"
+                            CornerRadius="0, 0, 8, 8"
+                            BorderThickness="0"
+                            BorderBrush="{StaticResource BackgroundBrush}"
+                            Background="{StaticResource BackgroundBrush}">
+
+                        <TextBlock Name="label_title"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Bold"
+                                   FontSize="24"
+                                   Padding="0"
+                                   Margin="8, 16, 8, 8"
+                                   Foreground="{StaticResource TextBrush}"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center" 
+                                   TextWrapping="Wrap"
+                                   Text="{Binding IngredientNames}"/>
+
+                    </Border>
+
+                </Grid>
+                
             </Grid>
 
         </Border>

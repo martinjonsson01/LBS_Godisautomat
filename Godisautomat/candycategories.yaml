@@ -1,0 +1,857 @@
+candycategories:
+  chocolate:
+    name: Chocolate
+    imageurl: http://moneyinc.com/wp-content/uploads/2017/07/Chocolate-1024x576.jpg
+    candytypes:
+      milk:
+        name: Milk Chocolate
+        imageurl: https://s-i.huffpost.com/gadgets/slideshows/359488/slide_359488_4008550_free.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "../Images/Logo.png"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      dark:
+        name: Dark Chocolate
+        imageurl: https://s3.amazonaws.com/secretsaucefiles/photos/images/000/012/350/large/chocolate-1277002_1280.jpg?1474428716
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      nut:
+        name: Chocolate with Nuts
+        imageurl: https://cdn.pixabay.com/photo/2017/05/21/16/36/chocolate-2331693_960_720.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      wafer:
+        name: Chocolate Wafer
+        imageurl: https://mobile-cuisine.com/wp-content/uploads/2012/07/chocolate-wafers1-e1446397590746.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      light:
+        name: Light Chocolate
+        imageurl: https://i.pinimg.com/736x/5c/ab/9f/5cab9f5a77464ccdfef64dbd51105bfb--chocolate-bars-sweet.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      white:
+        name: White Chocolate
+        imageurl: https://www.livekindly.co/wp-content/uploads/2017/09/white-chocolate-380702_1280-1280x640.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+  nuts:
+    name: Nuts
+    imageurl: http://www.dogingtonpost.com/wp-content/uploads/2015/10/nuts.jpg
+    candytypes:
+      hazelnut:
+        name: Hazelnuts
+        imageurl: http://irecommend.ru/sites/default/files/product-images/96727/wIFRQKr1TNvUZ8bDwYEhQ.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      pistachio:
+        name: Pistachio Nuts
+        imageurl: http://www.a2zedbasket.com/wp-content/uploads/2017/02/Pista-Roasted-Regular.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      cashew:
+        name: Cashew Nuts
+        imageurl: https://sc01.alicdn.com/kf/UTB8DL_OfhHEXKJk43Jeq6yeeXXar/Raw-Cashew-Nuts-Processed-Cashew-nuts.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      almond:
+        name: Almond Nuts
+        imageurl: https://www.healthline.com/hlcmsresource/images/AN_images/AN115-Almonds-732x549-thumb.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      walnut:
+        name: Walnuts
+        imageurl: https://img.aws.livestrongcdn.com/ls-article-image-673/ds-photo/getty/article/129/110/78290940.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      pecan:
+        name: Pecan Nuts
+        imageurl: https://fthmb.tqn.com/0vBs1tDZY4Eea00nbnxfuN-JJ8M=/3865x2576/filters:no_upscale()/pecan-nuts--full-frame-842247550-59d436a2519de2001203f44e.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+  licorice:
+    name: Licorice
+    imageurl: https://w.cdn-expressen.se/images/bb/8b/bb8bfb73edc94139a4645f2e7d7a8e9a/4x3/650@80.jpg
+    candytypes:
+      red:
+        name: Red Licorice
+        imageurl: https://smhttp-ssl-60529.nexcesscdn.net/pub/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/r/e/red-licorice-twists.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      salty:
+        name: Salty Licorice
+        imageurl: https://www.made-in-scandinavian.com/uploads/2/3/2/3/23232440/s328127075831127421_p719_i9_w1000.jpeg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      wheels:
+        name: Licorice Wheels
+        imageurl: https://www.funkycandyshop.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/i/liquorice_wheels_2__1_1.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      allsorts:
+        name: Licorice Allsorts
+        imageurl: http://sweetsinbags.com/wp-content/uploads/2015/08/Liquorice-Allsorts-Sweets-in-a-Bag.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+  sour:
+    name: Sour
+    imageurl: https://candyfromsweden.weebly.com/uploads/2/3/2/3/23232440/s583279838110630324_p22_i1_w400.jpeg
+    candytypes:
+      skulls:
+        name: Sour Skulls
+        imageurl: https://candyfromsweden.weebly.com/uploads/2/3/2/3/23232440/s583279838110630324_p22_i1_w400.jpeg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      patchkids:
+        name: Sour Patch Kids
+        imageurl: https://smhttp-ssl-60529.nexcesscdn.net/pub/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/s/o/sour-patch-kids-bulk_1.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      skittles:
+        name: Skittles
+        imageurl: https://pbs.twimg.com/media/DNvCZVCVQAERWAq.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      warheads:
+        name: Warheads
+        imageurl: https://cdn.shopify.com/s/files/1/1540/2955/products/warheads-extreme-sour-hard-candy.jpg?v=1491941695
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+  caramel:
+    name: Caramel
+    imageurl: http://www.ertgodis.se/PRODUCTS/Medium/4269.jpg
+    candytypes:
+      wethers:
+        name: Werther's Original
+        imageurl: http://cdn.shopify.com/s/files/1/0542/2249/products/Caramel-Candy_600x.jpg?v=1483386671
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      fudge:
+        name: Fudge Caramel
+        imageurl: http://www.momswhothink.com/images/stories/food/xCaramel_Fudge.jpg.pagespeed.ic.SfmtEcqdkz.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+  mint:
+    name: Mint
+    imageurl: http://godispanatet.se/PICTURE/357-4-10571pastellmint.jpg
+    candytypes:
+      marianne:
+        name: Marianne
+        imageurl: http://www.alternativefinland.com/wp-content/uploads/2014/07/Marianne-candy.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      polka:
+        name: Polka
+        imageurl: http://www.made-in-scandinavian.com/uploads/2/3/2/3/23232440/s328127075831127421_p382_i3_w600.jpeg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      tictac:
+        name: Tic Tac
+        imageurl: https://w1.ezcdn.com.br/drogariaprimus/fotos/zoom/189564fz1/bala-tic-tac-sabor-menta-8-7g.jpg
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      mentos:
+        name: Mentos
+        imageurl: https://www.candywarehouse.com/assets/item/regular/mentos-mint-candy-roll-126949.jpgflutter
+        price: "20 kr"
+        ingredients:
+          0:
+            name: "Peanuts"
+            allergic: true
+            warningimage: "Peanuts.jpg"
+          1: 
+            name: "ingredient2"
+            allergic: false
+            warningimage: ""
+          2: 
+            name: "ingredient3"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "ingredient4"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
