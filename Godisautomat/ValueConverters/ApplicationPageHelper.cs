@@ -34,7 +34,7 @@ namespace Godisautomat.ValueConverters
                     return new CandyTypesPage(viewModel as CandyTypesViewModel);
 
                 case ApplicationPage.CandyDetails:
-                    //return new CandyDetailsPage(viewModel as CandyDetailsPageViewModel);
+                    return new CandyDetailsPage(viewModel as CandyDetailsViewModel);
 
                 case ApplicationPage.Buy:
                     //return new BuyPage(viewModel as BuyViewModel);
@@ -56,13 +56,13 @@ namespace Godisautomat.ValueConverters
             if (page is CategoriesPage)
                 return ApplicationPage.Categories;
 
-            /*if (page is CandyTypesPage)
+            if (page is CandyTypesPage)
                 return ApplicationPage.CandyTypes;
 
             if (page is CandyDetailsPage)
                 return ApplicationPage.CandyDetails;
 
-            if (page is BuyPage)
+            /*if (page is BuyPage)
                 return ApplicationPage.Buy;*/
 
             // Alert developer of issue

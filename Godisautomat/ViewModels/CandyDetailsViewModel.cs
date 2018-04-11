@@ -11,13 +11,13 @@ using System.Windows.Input;
 namespace Godisautomat.ViewModels
 {
     /// <summary>
-    /// The View Model for a candy types screen
+    /// The View Model for a candy details screen
     /// </summary>
-    public class CandyTypesViewModel : BaseViewModel
+    public class CandyDetailsViewModel : BaseViewModel
     {
         #region Public Properties
-        
-        public CandyCategory Category { get; set; }
+
+        public CandyType Type { get; set; }
 
         #endregion
 
@@ -32,7 +32,7 @@ namespace Godisautomat.ViewModels
 
         #region Constructor
 
-        public CandyTypesViewModel()
+        public CandyDetailsViewModel()
         {
 
         }
@@ -40,22 +40,22 @@ namespace Godisautomat.ViewModels
         /// <summary>
         /// Default constructor
         /// </summary>
-        public CandyTypesViewModel(CandyCategory category)
+        public CandyDetailsViewModel(CandyType type)
         {
-            Category = category;
+            Type = type;
 
             // Create commands
-            SelectCandyTypeCommand = new RelayParameterizedCommand(async (parameter) => await SelectCandyTypeAsync(parameter));
+            //SelectCandyTypeCommand = new RelayParameterizedCommand(async (parameter) => await SelectCandyTypeAsync(parameter));
         }
 
         #endregion
 
-        private async Task SelectCandyTypeAsync(object parameter)
+        /*private async Task SelectCandyTypeAsync(object parameter)
         {
             IoC.Application.GoToPage(ApplicationPage.CandyDetails);
 
             await Task.Delay(1);
-        }
+        }*/
 
     }
 }

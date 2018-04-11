@@ -153,6 +153,9 @@
     <Compile Include="Helpers\YAML\YamlFile.cs" />
     <Compile Include="Helpers\YAML\YamlHelper.cs" />
     <Compile Include="IoCComponents\Interfaces\ITaskManager.cs" />
+    <Compile Include="Pages\CandyDetailsPage.xaml.cs">
+      <DependentUpon>CandyDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CandyTypesPage.xaml.cs">
       <DependentUpon>CandyTypesPage.xaml</DependentUpon>
     </Compile>
@@ -165,6 +168,7 @@
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
     <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
+    <Compile Include="ViewModels\CandyDetailsViewModel.cs" />
     <Compile Include="ViewModels\CandyTypesViewModel.cs" />
     <Compile Include="ViewModels\CategoriesViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
@@ -202,6 +206,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\CandyDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\CandyTypesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

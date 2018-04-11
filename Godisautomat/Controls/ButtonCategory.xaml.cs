@@ -33,15 +33,7 @@ namespace Godisautomat.Controls
             button_main.Content = category.Name;
             button_main.Click += Category_Click;
         }
-
-        public ButtonCandy(CandyType type)
-        {
-            InitializeComponent();
-            button_main.Background = new ImageBrush(new BitmapImage(new Uri(type.ImageUrl)));
-            button_main.Content = type.Name;
-            button_main.Click += Category_Click;
-        }
-
+        
         private void Category_Click(object sender, RoutedEventArgs e)
         {
             IoC.Application.GoToPage(ApplicationPage.CandyTypes, new CandyTypesViewModel(_category));

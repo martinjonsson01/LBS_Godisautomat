@@ -161,7 +161,7 @@ namespace Godisautomat.Pages
         /// </summary>
         protected virtual void OnViewModelChanged()
         {
-
+            
         }
     }
 

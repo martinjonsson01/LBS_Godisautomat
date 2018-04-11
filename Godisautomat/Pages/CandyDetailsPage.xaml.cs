@@ -19,14 +19,14 @@ using System.Windows.Shapes;
 namespace Godisautomat.Pages
 {
     /// <summary>
-    /// Interaction logic for CandyTypesPage.xaml
+    /// Interaction logic for CandyDetailsPage.xaml
     /// </summary>
-    public partial class CandyTypesPage : BasePage<CandyTypesViewModel>
+    public partial class CandyDetailsPage : BasePage<CandyDetailsViewModel>
     {
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public CandyTypesPage() : base()
+        public CandyDetailsPage() : base()
         {
             InitializeComponent();
         }
@@ -34,20 +34,9 @@ namespace Godisautomat.Pages
         /// <summary>
         /// Constructor with specific view model.
         /// </summary>
-        public CandyTypesPage(CandyTypesViewModel specificViewModel) : base(specificViewModel)
+        public CandyDetailsPage(CandyDetailsViewModel specificViewModel) : base(specificViewModel)
         {
             InitializeComponent();
-
-            foreach (var type in specificViewModel?.Category?.CandyTypes)
-            {
-                var button = new ButtonCandyType(type)
-                {
-                    Width = 367,
-                    Height = 303,
-                    Margin = new Thickness(70, 20, 70, 20)
-                };
-                ButtonContainer.Children.Add(button);
-            }
         }
     }
 }

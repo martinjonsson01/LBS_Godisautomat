@@ -29,9 +29,10 @@
                    Stretch="None"/>
             <Label Grid.Row="0"
                    FontFamily="Montserrat"
+                   FontWeight="Bold"
                    FontSize="100"
                    Content="Candymachine™©"
-                   
+                   Foreground="{StaticResource TextBrush}"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
         </Grid>

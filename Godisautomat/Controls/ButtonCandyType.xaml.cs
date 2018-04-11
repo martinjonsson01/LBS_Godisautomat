@@ -1,5 +1,6 @@
 ﻿using Godisautomat.DataModels;
 using Godisautomat.IoCComponents.Base;
+using Godisautomat.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,12 @@ namespace Godisautomat.Controls
     /// </summary>
     public partial class ButtonCandyType : UserControl
     {
+        private CandyType _type;
+
         public ButtonCandyType(CandyType type)
         {
             InitializeComponent();
+            _type = type;
             button_main.Background = new ImageBrush(new BitmapImage(new Uri(type.ImageUrl)));
             button_main.Content = type.Name;
             button_main.Click += CandyType_Click;
@@ -32,7 +36,7 @@ namespace Godisautomat.Controls
 
         private void CandyType_Click(object sender, RoutedEventArgs e)
         {
-            IoC.Application.GoToPage(ApplicationPage.CandyDetails);
+            IoC.Application.GoToPage(ApplicationPage.CandyDetails, new CandyDetailsViewModel(_type));
         }
     }
 }
