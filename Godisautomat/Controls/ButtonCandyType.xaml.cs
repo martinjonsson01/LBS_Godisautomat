@@ -30,6 +30,7 @@ namespace Godisautomat.Controls
             InitializeComponent();
             _type = type;
             button_main.Background = new ImageBrush(new BitmapImage(new Uri(type.ImageUrl)));
+            (button_main.Background as ImageBrush).Stretch = Stretch.UniformToFill;
             button_main.Content = type.Name;
             button_main.Click += CandyType_Click;
         }

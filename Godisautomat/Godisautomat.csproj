@@ -181,6 +181,9 @@
     <Compile Include="Helpers\YAML\YamlFile.cs" />
     <Compile Include="Helpers\YAML\YamlHelper.cs" />
     <Compile Include="IoCComponents\Interfaces\ITaskManager.cs" />
+    <Compile Include="Pages\BuyPage.xaml.cs">
+      <DependentUpon>BuyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CandyDetailsPage.xaml.cs">
       <DependentUpon>CandyDetailsPage.xaml</DependentUpon>
     </Compile>
@@ -238,6 +241,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\BuyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CandyDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

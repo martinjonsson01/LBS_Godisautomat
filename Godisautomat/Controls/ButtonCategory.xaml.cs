@@ -30,6 +30,7 @@ namespace Godisautomat.Controls
             InitializeComponent();
             _category = category;
             button_main.Background = new ImageBrush(new BitmapImage(new Uri(category.ImageUrl)));
+            (button_main.Background as ImageBrush).Stretch = Stretch.UniformToFill;
             button_main.Content = category.Name;
             button_main.Click += Category_Click;
         }

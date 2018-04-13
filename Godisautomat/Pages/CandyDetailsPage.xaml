@@ -136,7 +136,8 @@
                             CornerRadius="8, 8, 0, 0"
                             BorderThickness="0">
                         <Border.Background>
-                            <ImageBrush ImageSource="{Binding Type.ImageUrl, FallbackValue=http://moneyinc.com/wp-content/uploads/2017/07/Chocolate-1024x576.jpg}" />
+                            <ImageBrush ImageSource="{Binding Type.ImageUrl, FallbackValue=http://moneyinc.com/wp-content/uploads/2017/07/Chocolate-1024x576.jpg}"
+                                        Stretch="UniformToFill"/>
                         </Border.Background>
                     </Border>
 
@@ -155,7 +156,7 @@
                                    Margin="8, 16, 8, 8"
                                    Foreground="{StaticResource TextBrush}"
                                    VerticalAlignment="Top"
-                                   HorizontalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
                                    TextWrapping="Wrap"
                                    Text="{Binding IngredientNames}"/>
 
