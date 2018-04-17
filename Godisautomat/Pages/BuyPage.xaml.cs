@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Godisautomat.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace Godisautomat.Pages
     /// <summary>
     /// Interaction logic for BuyPage.xaml
     /// </summary>
-    public partial class BuyPage : BasePage
+    public partial class BuyPage : BasePage<BuyPageViewModel>
     {
         public BuyPage()
         {

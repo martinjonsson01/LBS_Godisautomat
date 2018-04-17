@@ -199,6 +199,7 @@
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
     <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
+    <Compile Include="ViewModels\BuyPageViewModel.cs" />
     <Compile Include="ViewModels\CandyDetailsViewModel.cs" />
     <Compile Include="ViewModels\CandyTypesViewModel.cs" />
     <Compile Include="ViewModels\CategoriesViewModel.cs" />

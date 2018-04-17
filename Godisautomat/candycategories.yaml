@@ -337,15 +337,15 @@ candycategories:
             allergic: true
             warningimage: "Peanuts.jpg"
           1: 
-            name: "ingredient2"
-            allergic: false
-            warningimage: ""
+            name: "N U T"
+            allergic: true
+            warningimage: "insta_nut.jpg"
           2: 
-            name: "ingredient3"
+            name: "Normie Repellant"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Loli Love Juice"
             allergic: false
             warningimage: ""
         sizes:
