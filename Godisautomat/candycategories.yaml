@@ -6,7 +6,7 @@ candycategories:
       milk:
         name: Milk Chocolate
         imageurl: https://s-i.huffpost.com/gadgets/slideshows/359488/slide_359488_4008550_free.jpg
-        price: "20 kr"
+        price: "1337 kr"
         ingredients:
           0:
             name: "Peanuts"

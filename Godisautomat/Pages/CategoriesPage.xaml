@@ -9,7 +9,7 @@
       x:Name="Page"
       mc:Ignorable="d" 
       SnapsToDevicePixels="True"
-      d:DesignHeight="768" d:DesignWidth="1366">
+      d:DesignHeight="663" d:DesignWidth="1366">
 
     <Grid>
 
@@ -30,13 +30,6 @@
 
             </LinearGradientBrush>
         </Grid.Background>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="105" />
-            <RowDefinition Height="930" />
-        </Grid.RowDefinitions>
-
-        <c:TitleBar/>
 
         <c:CategoriesHolder Grid.Row="1">
             

@@ -35,6 +35,9 @@ namespace Godisautomat.Animation
             // Add fade in animation
             sb.AddFadeIn(seconds);
 
+            // 60 FPS
+            Timeline.SetDesiredFrameRate(sb, 60); 
+
             // Start animating
             sb.Begin(page);
 
@@ -61,6 +64,9 @@ namespace Godisautomat.Animation
 
             // Add fade in animation
             sb.AddFadeOut(seconds);
+
+            // 60 FPS
+            Timeline.SetDesiredFrameRate(sb, 60);
 
             // Start animating
             sb.Begin(page);
@@ -89,6 +95,9 @@ namespace Godisautomat.Animation
             // Add fade out animation
             sb.AddFadeOut(seconds);
 
+            // 60 FPS
+            Timeline.SetDesiredFrameRate(sb, 60);
+
             // Start animating
             sb.Begin(page);
 
@@ -115,6 +124,9 @@ namespace Godisautomat.Animation
 
             // Add fade in animation
             sb.AddFadeIn(seconds);
+
+            // 60 FPS
+            Timeline.SetDesiredFrameRate(sb, 60);
 
             // Start animating
             sb.Begin(page);

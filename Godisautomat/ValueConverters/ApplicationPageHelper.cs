@@ -37,7 +37,7 @@ namespace Godisautomat.ValueConverters
                     return new CandyDetailsPage(viewModel as CandyDetailsViewModel);
 
                 case ApplicationPage.Buy:
-                    //return new BuyPage(viewModel as BuyViewModel);
+                    return new BuyPage(viewModel as BuyViewModel);
 
                 default:
                     Debugger.Break();
@@ -62,8 +62,8 @@ namespace Godisautomat.ValueConverters
             if (page is CandyDetailsPage)
                 return ApplicationPage.CandyDetails;
 
-            /*if (page is BuyPage)
-                return ApplicationPage.Buy;*/
+            if (page is BuyPage)
+                return ApplicationPage.Buy;
 
             // Alert developer of issue
             Debugger.Break();

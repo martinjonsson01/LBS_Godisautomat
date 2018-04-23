@@ -19,10 +19,25 @@ namespace Godisautomat.Pages
     /// <summary>
     /// Interaction logic for BuyPage.xaml
     /// </summary>
-    public partial class BuyPage : BasePage<BuyPageViewModel>
+    public partial class BuyPage : BasePage<BuyViewModel>
     {
-        public BuyPage()
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        public BuyPage() : base()
         {
+            PageUnloadAnimation = Animation.PageAnimation.SlideInFromLeft;
+            PageLoadAnimation = Animation.PageAnimation.SlideInFromRight;
+            InitializeComponent();
+        }
+
+        /// <summary>
+        /// Constructor with specific view model.
+        /// </summary>
+        public BuyPage(BuyViewModel specificViewModel) : base(specificViewModel)
+        {
+            PageUnloadAnimation = Animation.PageAnimation.SlideInFromLeft;
+            PageLoadAnimation = Animation.PageAnimation.SlideInFromRight;
             InitializeComponent();
         }
     }

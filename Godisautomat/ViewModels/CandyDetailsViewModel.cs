@@ -71,7 +71,7 @@ namespace Godisautomat.ViewModels
 
             // Create commands
             BackCommand = new RelayCommand(() => IoC.Application.GoToPage(ApplicationPage.CandyTypes, new CandyTypesViewModel(Type.Category)));
-            //BuyCommand = new RelayCommand(() => IoC.Application.GoToPage(ApplicationPage.Buy, new BuyViewModel(Type)));
+            BuyCommand = new RelayCommand(() => IoC.Application.GoToPage(ApplicationPage.Buy, new BuyViewModel(Type)));
         }
 
         #endregion

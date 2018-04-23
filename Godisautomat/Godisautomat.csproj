@@ -199,7 +199,7 @@
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
     <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
-    <Compile Include="ViewModels\BuyPageViewModel.cs" />
+    <Compile Include="ViewModels\BuyViewModel.cs" />
     <Compile Include="ViewModels\CandyDetailsViewModel.cs" />
     <Compile Include="ViewModels\CandyTypesViewModel.cs" />
     <Compile Include="ViewModels\CategoriesViewModel.cs" />
@@ -317,7 +317,12 @@
     <Resource Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\cash.png" />
+    <Resource Include="Images\credit-card.png" />
     <Content Include="Images\ic_arrow_back_black_48px.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ic_cancel_black_48px.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\ic_shopping_cart_black_48px.svg">

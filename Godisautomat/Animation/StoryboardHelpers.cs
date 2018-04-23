@@ -31,7 +31,7 @@ namespace Godisautomat.Animation
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
                 From = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
                 To = new Thickness(0),
-                DecelerationRatio = decelerationRatio
+                DecelerationRatio = decelerationRatio,
             };
 
             // Set the target property name

@@ -367,6 +367,169 @@
         </Setter>
     </Style>
 
+    <!-- Payment button -->
+    <Style x:Key="Payment" TargetType="{x:Type Button}">
+
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Width" Value="340" />
+        <Setter Property="Height" Value="300" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+
+                    <Border Name="border"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Width="337"
+                            Height="250"
+                            CornerRadius="8"
+                            BorderThickness="0"
+                            BorderBrush="{StaticResource PositiveBrush}"
+                            Background="{StaticResource PositiveBrush}">
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0.15"/>
+                                    <VisualTransition To="Normal" GeneratedDuration="0:0:0.15"/>
+                                    <VisualTransition To="Pressed" GeneratedDuration="0:0:0.10"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver"/>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" 
+                                                        To="{StaticResource PositiveAccent}"
+                                                        Duration="0:0:0.15"/>
+                                        <DoubleAnimation To="1.1" 
+                                                         Duration="0" 
+                                                         Storyboard.TargetName="border" 
+                                                         Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1.1"
+                                                         Duration="0"
+                                                         Storyboard.TargetName="border"
+                                                         Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)" />
+                                        <DoubleAnimation To="20"
+                                                         Duration="1"
+                                                         Storyboard.TargetName="dropshadow"
+                                                         Storyboard.TargetProperty="ShadowDepth" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <!-- Add a render scale transform -->
+                        <Border.RenderTransform>
+                            <ScaleTransform ScaleX="1"
+                                            ScaleY="1"/>
+                        </Border.RenderTransform>
+                        <Border.RenderTransformOrigin>
+                            <Point X="0.5" Y="0.5" />
+                        </Border.RenderTransformOrigin>
+
+                        <Border.Effect>
+                            <DropShadowEffect x:Name="dropshadow"
+                                              BlurRadius="16"
+                                              Direction="270"
+                                              Opacity="0.7" 
+                                              RenderingBias="Quality"
+                                              ShadowDepth="8"/>
+                        </Border.Effect>
+
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+
+                    </Border>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Cancel button -->
+    <Style x:Key="Cancel" TargetType="{x:Type Button}">
+
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Width" Value="246" />
+        <Setter Property="Height" Value="110" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+
+                    <Border Name="border"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Width="246"
+                            Height="110"
+                            CornerRadius="8"
+                            BorderThickness="0"
+                            BorderBrush="{StaticResource NegativeBrush}"
+                            Background="{StaticResource NegativeBrush}">
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0.15"/>
+                                    <VisualTransition To="Normal" GeneratedDuration="0:0:0.15"/>
+                                    <VisualTransition To="Pressed" GeneratedDuration="0:0:0.10"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver"/>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" 
+                                                        To="{StaticResource NegativeAccent}"
+                                                        Duration="0:0:0.15"/>
+                                        <DoubleAnimation To="1.1" 
+                                                         Duration="0" 
+                                                         Storyboard.TargetName="border" 
+                                                         Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1.1"
+                                                         Duration="0"
+                                                         Storyboard.TargetName="border"
+                                                         Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)" />
+                                        <DoubleAnimation To="20"
+                                                         Duration="1"
+                                                         Storyboard.TargetName="dropshadow"
+                                                         Storyboard.TargetProperty="ShadowDepth" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <!-- Add a render scale transform -->
+                        <Border.RenderTransform>
+                            <ScaleTransform ScaleX="1"
+                                            ScaleY="1"/>
+                        </Border.RenderTransform>
+                        <Border.RenderTransformOrigin>
+                            <Point X="0.5" Y="0.5" />
+                        </Border.RenderTransformOrigin>
+
+                        <Border.Effect>
+                            <DropShadowEffect x:Name="dropshadow"
+                                              BlurRadius="16"
+                                              Direction="270"
+                                              Opacity="0.7" 
+                                              RenderingBias="Quality"
+                                              ShadowDepth="8"/>
+                        </Border.Effect>
+
+                        <Grid>
+
+                            <svgc:SvgViewbox Source="/Images/ic_cancel_black_48px.svg" 
+                                             Margin="11"/>
+
+                        </Grid>
+
+                    </Border>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <!-- Weight button -->
     <Style x:Key="Weight"  TargetType="{x:Type Button}">
 

@@ -11,22 +11,32 @@
       xmlns:c="clr-namespace:Godisautomat.Controls"
       x:Name="Page"
       mc:Ignorable="d" 
-      d:DesignHeight="768" d:DesignWidth="1366">
+      d:DesignHeight="663" d:DesignWidth="1366">
 
-    <Grid Background="{StaticResource MainBrush}">
+    <Grid>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="105" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform Angle="290" CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+
+                <GradientStop Color="#8cd6f7" Offset="0"/>
+                <GradientStop Color="{StaticResource Main}" Offset="0.567"/>
+
+            </LinearGradientBrush>
+        </Grid.Background>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
-        <c:TitleBar Grid.Row="0"
-                    Grid.ColumnSpan="3"/>
 
         <Button Style="{StaticResource Back}"
                 Grid.Row="1"
