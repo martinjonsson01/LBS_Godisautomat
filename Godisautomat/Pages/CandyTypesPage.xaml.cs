@@ -28,8 +28,6 @@ namespace Godisautomat.Pages
         /// </summary>
         public CandyTypesPage() : base()
         {
-            PageUnloadAnimation = Animation.PageAnimation.None;
-            PageLoadAnimation = Animation.PageAnimation.SlideInFromLeft;
             InitializeComponent();
         }
 
@@ -38,8 +36,6 @@ namespace Godisautomat.Pages
         /// </summary>
         public CandyTypesPage(CandyTypesViewModel specificViewModel) : base(specificViewModel)
         {
-            PageUnloadAnimation = Animation.PageAnimation.None;
-            PageLoadAnimation = Animation.PageAnimation.SlideInFromLeft;
             InitializeComponent();
 
             foreach (var type in specificViewModel?.Category?.CandyTypes)

@@ -16,6 +16,8 @@ using System.Net.Cache;
 using System.Runtime.InteropServices;
 using System.Windows.Threading;
 using System.Windows.Media.Animation;
+using Godisautomat.ViewModels;
+using Godisautomat.Animation;
 
 namespace Godisautomat
 {
@@ -73,14 +75,14 @@ namespace Godisautomat
             }
 
             // Setup the application view model.
-            IoC.Application.GoToPage(DataModels.ApplicationPage.Categories);
+            IoC.Application.GoToPage(DataModels.ApplicationPage.Categories, new CategoriesViewModel { PageLoadAnimation = PageAnimation.None, PageUnloadAnimation = PageAnimation.SlideOutToRight});
 
             // Set up idle timer.
             IdleTimer.Interval = new TimeSpan(0, 0, 1);
             IdleTimer.Tick += (sender, arg) =>
             {
                 // If UI has been idle for 30 seconds.
-                if (GetIdleTime() > 20 * 1000)
+                if (GetIdleTime() > 30 * 1000)
                 {
                     // Go back to main screen.
                     IoC.Application.GoToPage(DataModels.ApplicationPage.Categories);

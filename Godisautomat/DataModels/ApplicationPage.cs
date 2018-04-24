@@ -30,5 +30,30 @@ namespace Godisautomat.DataModels
         /// The buy page.
         /// </summary>
         Buy = 3,
+
+        /// <summary>
+        /// The card payment modal page.
+        /// </summary>
+        ModalCardPayment = 4,
+
+        /// <summary>
+        /// The cash payment modal page.
+        /// </summary>
+        ModalCashPayment = 5,
+
+        /// <summary>
+        /// The payment success modal page.
+        /// </summary>
+        ModalPaymentSuccess = 6,
+
+        /// <summary>
+        /// The payment failure modal page.
+        /// </summary>
+        ModalPaymentFailure = 7,
+
+        /// <summary>
+        /// No page.
+        /// </summary>
+        None = 8,
     }
 }

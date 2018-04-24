@@ -25,17 +25,7 @@ namespace Godisautomat.Pages
         #endregion
 
         #region Public Properties
-
-        /// <summary>
-        /// The animation the play when the page is first loaded
-        /// </summary>
-        public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideInFromRight;
-
-        /// <summary>
-        /// The animation the play when the page is unloaded
-        /// </summary>
-        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideOutToLeft;
-
+        
         /// <summary>
         /// The time any slide animation takes to complete
         /// </summary>
@@ -83,9 +73,12 @@ namespace Godisautomat.Pages
             if (DesignerProperties.GetIsInDesignMode(this))
                 return;
 
-            // If we are animating in, hide to begin with
-            if (PageLoadAnimation != PageAnimation.None)
-                Visibility = Visibility.Collapsed;
+            if (mViewModel is BaseViewModel vm)
+            {
+                // If we are animating in, hide to begin with
+                if (vm.PageLoadAnimation != PageAnimation.None)
+                    Visibility = Visibility.Collapsed;
+            }
 
             // Listen out for the page loading
             Loaded += BasePage_LoadedAsync;
@@ -118,25 +111,28 @@ namespace Godisautomat.Pages
         /// <returns></returns>
         public async Task AnimateInAsync()
         {
-            // Make sure we have something to do
-            if (PageLoadAnimation == PageAnimation.None)
-                return;
-
-            switch (PageLoadAnimation)
+            if (mViewModel is BaseViewModel vm)
             {
-                case PageAnimation.SlideInFromRight:
+                // Make sure we have something to do
+                if (vm.PageLoadAnimation == PageAnimation.None)
+                    return;
 
-                    // Start the animation
-                    await this.SlideAndFadeInAsync(AnimationSlideInDirection.Right, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width, fade: false);
+                switch (vm.PageLoadAnimation)
+                {
+                    case PageAnimation.SlideInFromRight:
 
-                    break;
+                        // Start the animation
+                        await this.SlideAndFadeInAsync(AnimationSlideInDirection.Right, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width, fade: false);
 
-                case PageAnimation.SlideInFromLeft:
+                        break;
 
-                    // Start the animation
-                    await this.SlideAndFadeInAsync(AnimationSlideInDirection.Left, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width, fade: false);
-                    
-                    break;
+                    case PageAnimation.SlideInFromLeft:
+
+                        // Start the animation
+                        await this.SlideAndFadeInAsync(AnimationSlideInDirection.Left, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width, fade: false);
+
+                        break;
+                }
             }
         }
 
@@ -146,25 +142,28 @@ namespace Godisautomat.Pages
         /// <returns></returns>
         public async Task AnimateOutAsync()
         {
-            // Make sure we have something to do
-            if (PageUnloadAnimation == PageAnimation.None)
-                return;
-
-            switch (PageUnloadAnimation)
+            if (mViewModel is BaseViewModel vm)
             {
-                case PageAnimation.SlideOutToLeft:
+                // Make sure we have something to do
+                if (vm.PageUnloadAnimation == PageAnimation.None)
+                    return;
 
-                    // Start the animation
-                    await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Left, SlideSeconds, fade: false);
+                switch (vm.PageUnloadAnimation)
+                {
+                    case PageAnimation.SlideOutToLeft:
 
-                    break;
+                        // Start the animation
+                        await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Left, SlideSeconds, fade: false);
 
-                case PageAnimation.SlideOutToRight:
+                        break;
 
-                    // Start the animation
-                    await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Right, SlideSeconds, fade: false);
+                    case PageAnimation.SlideOutToRight:
 
-                    break;
+                        // Start the animation
+                        await this.SlideAndFadeOutAsync(AnimationSlideInDirection.Right, SlideSeconds, fade: false);
+
+                        break;
+                }
             }
         }
 
@@ -217,7 +216,9 @@ namespace Godisautomat.Pages
         {
             // Set specific view model
             if (specificViewModel != null)
+            {
                 ViewModel = specificViewModel;
+            }
             else
                 // Create a default view model
                 ViewModel = IoC.Get<VM>();

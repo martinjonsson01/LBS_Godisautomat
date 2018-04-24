@@ -1,4 +1,5 @@
-﻿using Godisautomat.DataModels;
+﻿using Godisautomat.Animation;
+using Godisautomat.DataModels;
 using Godisautomat.IoCComponents.Base;
 using Godisautomat.ViewModels.Base;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Godisautomat.ViewModels
@@ -15,17 +17,32 @@ namespace Godisautomat.ViewModels
     /// </summary>
     public class CandyDetailsViewModel : BaseViewModel
     {
+        private string _currentAmount;
         #region Public Properties
 
         public CandyType Type { get; set; }
 
-        public string IngredientNames {
+        public string TotalPrice
+        {
+            get
+            {
+                var priceString = Type.Price.Substring(0, Type.Price.Length - 3);
+                var price = int.Parse(priceString);
+                var totalPrice = price * Type.Sizes.IndexOf(CurrentAmount) + price;
+                return $"{totalPrice} kr";
+            }
+        }
+
+        public string IngredientNames
+        {
             get
             {
                 var names = "Contains:\n";
                 foreach (var ingredient in Type.Ingredients)
                 {
-                    names += $"{ingredient.Name}, ";
+                    names += $"{ingredient.Name}";
+                    if (Type.Ingredients.Last() != ingredient)
+                        names += ", ";
                 }
                 return names;
             }
@@ -45,13 +62,27 @@ namespace Godisautomat.ViewModels
             }
         }
 
+        public string CurrentAmount
+        {
+            get => _currentAmount;
+            set
+            {
+                _currentAmount = value;
+                OnPropertyChanged(nameof(TotalPrice));
+            }
+        }
+
+        public Visibility AmountMenuVisibility { get; set; } = Visibility.Hidden;
+
         #endregion
 
         #region Commands
-        
+
         public ICommand BackCommand { get; set; }
 
         public ICommand BuyCommand { get; set; }
+
+        public ICommand WeightCommand { get; set; }
 
         #endregion
 
@@ -68,13 +99,30 @@ namespace Godisautomat.ViewModels
         public CandyDetailsViewModel(CandyType type)
         {
             Type = type;
+            CurrentAmount = Type.Sizes[0];
 
             // Create commands
-            BackCommand = new RelayCommand(() => IoC.Application.GoToPage(ApplicationPage.CandyTypes, new CandyTypesViewModel(Type.Category)));
-            BuyCommand = new RelayCommand(() => IoC.Application.GoToPage(ApplicationPage.Buy, new BuyViewModel(Type)));
+            BackCommand = new RelayCommand(() =>
+            {
+                PageUnloadAnimation = PageAnimation.SlideOutToRight;
+                IoC.Application.GoToPage(ApplicationPage.CandyTypes, new CandyTypesViewModel(Type.Category) { PageLoadAnimation = PageAnimation.SlideInFromLeft });
+            });
+            BuyCommand = new RelayCommand(() => IoC.Application.GoToPage(ApplicationPage.Buy, new BuyViewModel(Type, CurrentAmount) { PageLoadAnimation = PageAnimation.SlideInFromRight, PageUnloadAnimation = PageAnimation.SlideOutToRight }));
+            WeightCommand = new RelayParameterizedCommand((size) =>
+            {
+                if (size is string sizeString)
+                {
+                    CurrentAmount = sizeString;
+                    AmountMenuVisibility = Visibility.Hidden;
+                }
+                else
+                {
+                    AmountMenuVisibility = Visibility.Visible;
+                }
+            });
         }
 
         #endregion
-        
+
     }
 }

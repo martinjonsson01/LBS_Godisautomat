@@ -6,24 +6,44 @@ candycategories:
       milk:
         name: Milk Chocolate
         imageurl: https://s-i.huffpost.com/gadgets/slideshows/359488/slide_359488_4008550_free.jpg
-        price: "1337 kr"
+        price: "19 kr"
         ingredients:
-          0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "../Images/Logo.png"
+          0: 
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Cocoa Butter"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Cocoa Mass"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Vegetable Fats"
             allergic: false
             warningimage: ""
+          4: 
+            name: "Emulsifiers"
+            allergic: false
+            warningimage: ""
+          5:
+            name: "Milk Extract"
+            allergic: true
+            warningimage: "../Images/WarningMilk.png"
+          6: 
+            name: "Flavourings"
+            allergic: false
+            warningimage: ""
+          7: 
+            name: "May contain nuts"
+            allergic: true
+            warningimage: "../Images/WarningPeanut.png"
+          8: 
+            name: "May contain wheat"
+            allergic: false
+            warningimage: "../Images/WarningWheat.png"
         sizes:
           0:
             name: "50 g"
@@ -38,24 +58,40 @@ candycategories:
       dark:
         name: Dark Chocolate
         imageurl: https://s3.amazonaws.com/secretsaucefiles/photos/images/000/012/350/large/chocolate-1277002_1280.jpg?1474428716
-        price: "20 kr"
+        price: "22 kr"
         ingredients:
-          0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+          0: 
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Cocoa Butter"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Cocoa Mass"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Vegetable Fats"
             allergic: false
             warningimage: ""
+          4: 
+            name: "Emulsifiers"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Flavourings"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "May contain nuts"
+            allergic: true
+            warningimage: "../Images/WarningPeanut.png"
+          7: 
+            name: "May contain wheat"
+            allergic: false
+            warningimage: "../Images/WarningWheat.png"
         sizes:
           0:
             name: "50 g"
@@ -70,24 +106,40 @@ candycategories:
       nut:
         name: Chocolate with Nuts
         imageurl: https://cdn.pixabay.com/photo/2017/05/21/16/36/chocolate-2331693_960_720.jpg
-        price: "20 kr"
+        price: "25 kr"
         ingredients:
-          0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+          0: 
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Cocoa Butter"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Cocoa Mass"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Vegetable Fats"
             allergic: false
             warningimage: ""
+          4: 
+            name: "Emulsifiers"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Flavourings"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "Nuts"
+            allergic: true
+            warningimage: "../Images/WarningPeanut.png"
+          7: 
+            name: "May contain wheat"
+            allergic: false
+            warningimage: "../Images/WarningWheat.png"
         sizes:
           0:
             name: "50 g"
@@ -102,24 +154,40 @@ candycategories:
       wafer:
         name: Chocolate Wafer
         imageurl: https://mobile-cuisine.com/wp-content/uploads/2012/07/chocolate-wafers1-e1446397590746.jpg
-        price: "20 kr"
+        price: "15 kr"
         ingredients:
-          0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+          0: 
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Cocoa Butter"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Cocoa Mass"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Vegetable Fats"
             allergic: false
             warningimage: ""
+          4: 
+            name: "Emulsifiers"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Flavourings"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "May contain nuts"
+            allergic: true
+            warningimage: "../Images/WarningPeanut.png"
+          7: 
+            name: "May contain wheat"
+            allergic: false
+            warningimage: "../Images/WarningWheat.png"
         sizes:
           0:
             name: "50 g"
@@ -136,22 +204,38 @@ candycategories:
         imageurl: https://i.pinimg.com/736x/5c/ab/9f/5cab9f5a77464ccdfef64dbd51105bfb--chocolate-bars-sweet.jpg
         price: "20 kr"
         ingredients:
-          0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+          0: 
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Cocoa Butter"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Cocoa Mass"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Vegetable Fats"
             allergic: false
             warningimage: ""
+          4: 
+            name: "Emulsifiers"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Flavourings"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "May contain nuts"
+            allergic: true
+            warningimage: "../Images/WarningPeanut.png"
+          7: 
+            name: "May contain wheat"
+            allergic: false
+            warningimage: "../Images/WarningWheat.png"
         sizes:
           0:
             name: "50 g"
@@ -166,24 +250,40 @@ candycategories:
       white:
         name: White Chocolate
         imageurl: https://www.livekindly.co/wp-content/uploads/2017/09/white-chocolate-380702_1280-1280x640.jpg
-        price: "20 kr"
+        price: "30 kr"
         ingredients:
-          0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+          0: 
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Cocoa Butter"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Cocoa Mass"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Vegetable Fats"
             allergic: false
             warningimage: ""
+          4: 
+            name: "Emulsifiers"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Flavourings"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "May contain nuts"
+            allergic: true
+            warningimage: "../Images/WarningPeanut.png"
+          7: 
+            name: "May contain wheat"
+            allergic: false
+            warningimage: "../Images/WarningWheat.png"
         sizes:
           0:
             name: "50 g"
@@ -202,24 +302,12 @@ candycategories:
       hazelnut:
         name: Hazelnuts
         imageurl: http://irecommend.ru/sites/default/files/product-images/96727/wIFRQKr1TNvUZ8bDwYEhQ.jpg
-        price: "20 kr"
+        price: "10 kr"
         ingredients:
           0:
-            name: "Peanuts"
+            name: "Nuts"
             allergic: true
-            warningimage: "Peanuts.jpg"
-          1: 
-            name: "ingredient2"
-            allergic: false
-            warningimage: ""
-          2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
-            allergic: false
-            warningimage: ""
+            warningimage: "../Images/WarningPeanut.png"
         sizes:
           0:
             name: "50 g"
@@ -237,21 +325,9 @@ candycategories:
         price: "20 kr"
         ingredients:
           0:
-            name: "Peanuts"
+            name: "Nuts"
             allergic: true
-            warningimage: "Peanuts.jpg"
-          1: 
-            name: "ingredient2"
-            allergic: false
-            warningimage: ""
-          2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
-            allergic: false
-            warningimage: ""
+            warningimage: "../Images/WarningPeanut.png"
         sizes:
           0:
             name: "50 g"
@@ -266,24 +342,12 @@ candycategories:
       cashew:
         name: Cashew Nuts
         imageurl: https://sc01.alicdn.com/kf/UTB8DL_OfhHEXKJk43Jeq6yeeXXar/Raw-Cashew-Nuts-Processed-Cashew-nuts.jpg
-        price: "20 kr"
+        price: "18 kr"
         ingredients:
           0:
-            name: "Peanuts"
+            name: "Nuts"
             allergic: true
-            warningimage: "Peanuts.jpg"
-          1: 
-            name: "ingredient2"
-            allergic: false
-            warningimage: ""
-          2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
-            allergic: false
-            warningimage: ""
+            warningimage: "../Images/WarningPeanut.png"
         sizes:
           0:
             name: "50 g"
@@ -298,24 +362,12 @@ candycategories:
       almond:
         name: Almond Nuts
         imageurl: https://www.healthline.com/hlcmsresource/images/AN_images/AN115-Almonds-732x549-thumb.jpg
-        price: "20 kr"
+        price: "25 kr"
         ingredients:
           0:
-            name: "Peanuts"
+            name: "Nuts"
             allergic: true
-            warningimage: "Peanuts.jpg"
-          1: 
-            name: "ingredient2"
-            allergic: false
-            warningimage: ""
-          2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
-            allergic: false
-            warningimage: ""
+            warningimage: "../Images/WarningPeanut.png"
         sizes:
           0:
             name: "50 g"
@@ -330,24 +382,12 @@ candycategories:
       walnut:
         name: Walnuts
         imageurl: https://img.aws.livestrongcdn.com/ls-article-image-673/ds-photo/getty/article/129/110/78290940.jpg
-        price: "20 kr"
+        price: "28 kr"
         ingredients:
           0:
-            name: "Peanuts"
+            name: "Nuts"
             allergic: true
-            warningimage: "Peanuts.jpg"
-          1: 
-            name: "N U T"
-            allergic: true
-            warningimage: "insta_nut.jpg"
-          2: 
-            name: "Normie Repellant"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "Loli Love Juice"
-            allergic: false
-            warningimage: ""
+            warningimage: "../Images/WarningPeanut.png"
         sizes:
           0:
             name: "50 g"
@@ -362,24 +402,12 @@ candycategories:
       pecan:
         name: Pecan Nuts
         imageurl: https://fthmb.tqn.com/0vBs1tDZY4Eea00nbnxfuN-JJ8M=/3865x2576/filters:no_upscale()/pecan-nuts--full-frame-842247550-59d436a2519de2001203f44e.jpg
-        price: "20 kr"
+        price: "17 kr"
         ingredients:
           0:
-            name: "Peanuts"
+            name: "Nuts"
             allergic: true
-            warningimage: "Peanuts.jpg"
-          1: 
-            name: "ingredient2"
-            allergic: false
-            warningimage: ""
-          2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
-            allergic: false
-            warningimage: ""
+            warningimage: "../Images/WarningPeanut.png"
         sizes:
           0:
             name: "50 g"
@@ -398,22 +426,18 @@ candycategories:
       red:
         name: Red Licorice
         imageurl: https://smhttp-ssl-60529.nexcesscdn.net/pub/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/r/e/red-licorice-twists.jpg
-        price: "20 kr"
+        price: "50 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Licorice extract"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Sugar"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
+            name: "Binding agent (starch, flour, gum arabic, gelatin)"
             allergic: false
             warningimage: ""
         sizes:
@@ -430,22 +454,18 @@ candycategories:
       salty:
         name: Salty Licorice
         imageurl: https://www.made-in-scandinavian.com/uploads/2/3/2/3/23232440/s328127075831127421_p719_i9_w1000.jpeg
-        price: "20 kr"
+        price: "10 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Licorice extract"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Sugar"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
+            name: "Binding agent (starch, flour, gum arabic, gelatin)"
             allergic: false
             warningimage: ""
         sizes:
@@ -465,19 +485,15 @@ candycategories:
         price: "20 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Licorice extract"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Sugar"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
+            name: "Binding agent (starch, flour, gum arabic, gelatin)"
             allergic: false
             warningimage: ""
         sizes:
@@ -494,22 +510,46 @@ candycategories:
       allsorts:
         name: Licorice Allsorts
         imageurl: http://sweetsinbags.com/wp-content/uploads/2015/08/Liquorice-Allsorts-Sweets-in-a-Bag.jpg
-        price: "20 kr"
+        price: "30 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
-          1: 
-            name: "ingredient2"
+            name: "Cane Molasses"
             allergic: false
             warningimage: ""
+          1: 
+            name: "Wheat Flour"
+            allergic: true
+            warningimage: "../Images/WarningWheat.png"
           2: 
-            name: "ingredient3"
+            name: "Glucose Syrup"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Desiccated Coconut"
+            allergic: false
+            warningimage: ""
+          4: 
+            name: "Palm Oil"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Beef Gelatine"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "Corn Starch"
+            allergic: false
+            warningimage: ""
+          7: 
+            name: "Glycerol"
+            allergic: false
+            warningimage: ""
+          8: 
+            name: "Natural Colors"
+            allergic: false
+            warningimage: ""
+          9: 
+            name: "Fat Reduced Cocoa Powder"
             allergic: false
             warningimage: ""
         sizes:
@@ -530,22 +570,26 @@ candycategories:
       skulls:
         name: Sour Skulls
         imageurl: https://candyfromsweden.weebly.com/uploads/2/3/2/3/23232440/s583279838110630324_p22_i1_w400.jpeg
-        price: "20 kr"
+        price: "5 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Glucose Syrup"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Corn Starch"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Water"
+            allergic: false
+            warningimage: ""
+          4: 
+            name: "Acidity Regulator"
             allergic: false
             warningimage: ""
         sizes:
@@ -562,22 +606,30 @@ candycategories:
       patchkids:
         name: Sour Patch Kids
         imageurl: https://smhttp-ssl-60529.nexcesscdn.net/pub/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/s/o/sour-patch-kids-bulk_1.jpg
-        price: "20 kr"
+        price: "40 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Corn Syrup"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Modified Corn Starch"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Citric Acid"
+            allergic: false
+            warningimage: ""
+          4: 
+            name: "Tartaric Acid"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Natural and Artifical Flavors"
             allergic: false
             warningimage: ""
         sizes:
@@ -594,22 +646,34 @@ candycategories:
       skittles:
         name: Skittles
         imageurl: https://pbs.twimg.com/media/DNvCZVCVQAERWAq.jpg
-        price: "20 kr"
+        price: "400 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Corn Syrup"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Hydrogenated Palm Kernel Oil"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Citric Acid"
+            allergic: false
+            warningimage: ""
+          4: 
+            name: "Tapioca Dextrin"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Modified Corn Starch"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "Natural and Artificial Flavors"
             allergic: false
             warningimage: ""
         sizes:
@@ -626,22 +690,30 @@ candycategories:
       warheads:
         name: Warheads
         imageurl: https://cdn.shopify.com/s/files/1/1540/2955/products/warheads-extreme-sour-hard-candy.jpg?v=1491941695
-        price: "20 kr"
+        price: "2 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Corn Syrup"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Sugar"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Microencapsulated Malic Acid"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Citric Acid"
+            allergic: false
+            warningimage: ""
+          4: 
+            name: "Gum Acacia"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Soybean Oil"
             allergic: false
             warningimage: ""
         sizes:
@@ -662,22 +734,42 @@ candycategories:
       wethers:
         name: Werther's Original
         imageurl: http://cdn.shopify.com/s/files/1/0542/2249/products/Caramel-Candy_600x.jpg?v=1483386671
-        price: "20 kr"
+        price: "90 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Glucose Syrup"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Cream"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Condensed Whey"
+            allergic: false
+            warningimage: ""
+          4: 
+            name: "Butter"
+            allergic: false
+            warningimage: ""
+          5: 
+            name: "Cane Sugar Syrup"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "Salt"
+            allergic: false
+            warningimage: ""
+          7: 
+            name: "Soy Lecithin Emulsifier"
+            allergic: false
+            warningimage: ""
+          8: 
+            name: "Artifical Flavor"
             allergic: false
             warningimage: ""
         sizes:
@@ -694,24 +786,20 @@ candycategories:
       fudge:
         name: Fudge Caramel
         imageurl: http://www.momswhothink.com/images/stories/food/xCaramel_Fudge.jpg.pagespeed.ic.SfmtEcqdkz.jpg
-        price: "20 kr"
+        price: "3 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Butter"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
-            allergic: false
-            warningimage: ""
+            name: "Milk"
+            allergic: true
+            warningimage: "../Images/WarningMilk.png"
         sizes:
           0:
             name: "50 g"
@@ -730,24 +818,40 @@ candycategories:
       marianne:
         name: Marianne
         imageurl: http://www.alternativefinland.com/wp-content/uploads/2014/07/Marianne-candy.jpg
-        price: "20 kr"
+        price: "26 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Glucose Syrup"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Cocoa Mass"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Vegetable Fat"
             allergic: false
             warningimage: ""
+          4:
+            name: "Cocoa Butter"
+            allergic: false
+            warningimage: ""
+          5:
+            name: "Flavorings"
+            allergic: false
+            warningimage: ""
+          6:
+            name: "Emulsifier"
+            allergic: false
+            warningimage: ""
+          7:
+            name: "May Contain Milk"
+            allergic: true
+            warningimage: "../Images/WarningMilk.png"
         sizes:
           0:
             name: "50 g"
@@ -762,22 +866,14 @@ candycategories:
       polka:
         name: Polka
         imageurl: http://www.made-in-scandinavian.com/uploads/2/3/2/3/23232440/s328127075831127421_p382_i3_w600.jpeg
-        price: "20 kr"
+        price: "14 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
-            allergic: false
-            warningimage: ""
-          2: 
-            name: "ingredient3"
-            allergic: false
-            warningimage: ""
-          3: 
-            name: "ingredient4"
+            name: "Peppermint"
             allergic: false
             warningimage: ""
         sizes:
@@ -794,22 +890,34 @@ candycategories:
       tictac:
         name: Tic Tac
         imageurl: https://w1.ezcdn.com.br/drogariaprimus/fotos/zoom/189564fz1/bala-tic-tac-sabor-menta-8-7g.jpg
-        price: "20 kr"
+        price: "8 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
+            name: "Sugar"
+            allergic: false
+            warningimage: ""
           1: 
-            name: "ingredient2"
+            name: "Maltodextrin"
             allergic: false
             warningimage: ""
           2: 
-            name: "ingredient3"
+            name: "Tartaric Acid"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Natural and Artifical Flavors"
+            allergic: false
+            warningimage: ""
+          4:
+            name: "Rice Starch"
+            allergic: false
+            warningimage: ""
+          5:
+            name: "Gum Arabic"
+            allergic: false
+            warningimage: ""
+          6:
+            name: "Filling Agent"
             allergic: false
             warningimage: ""
         sizes:
@@ -826,22 +934,38 @@ candycategories:
       mentos:
         name: Mentos
         imageurl: https://www.candywarehouse.com/assets/item/regular/mentos-mint-candy-roll-126949.jpgflutter
-        price: "20 kr"
+        price: "7 kr"
         ingredients:
           0:
-            name: "Peanuts"
-            allergic: true
-            warningimage: "Peanuts.jpg"
-          1: 
-            name: "ingredient2"
+            name: "Sugar"
             allergic: false
             warningimage: ""
+          1: 
+            name: "Wheat Glucose Syrup"
+            allergic: true
+            warningimage: "../Images/WarningWheat.png"
           2: 
-            name: "ingredient3"
+            name: "Hydrogenated Coconut Oil"
             allergic: false
             warningimage: ""
           3: 
-            name: "ingredient4"
+            name: "Rice Starch"
+            allergic: false
+            warningimage: ""
+          4:
+            name: "Natural Flavors"
+            allergic: false
+            warningimage: ""
+          5:
+            name: "Gum Arabic"
+            allergic: false
+            warningimage: ""
+          6:
+            name: "Sucrose Esters of Fatty Acids"
+            allergic: false
+            warningimage: ""
+          7:
+            name: "Gellan Gum"
             allergic: false
             warningimage: ""
         sizes:

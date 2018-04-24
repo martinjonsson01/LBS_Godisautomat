@@ -26,8 +26,6 @@ namespace Godisautomat.Pages
         /// </summary>
         public CategoriesPage() : base()
         {
-            PageLoadAnimation = Animation.PageAnimation.SlideInFromLeft;
-            PageUnloadAnimation = Animation.PageAnimation.None;
             InitializeComponent();
         }
         
@@ -36,8 +34,6 @@ namespace Godisautomat.Pages
         /// </summary>
         public CategoriesPage(CategoriesViewModel specificViewModel) : base(specificViewModel)
         {
-            PageLoadAnimation = Animation.PageAnimation.SlideInFromLeft;
-            PageUnloadAnimation = Animation.PageAnimation.None;
             InitializeComponent();
         }
     }

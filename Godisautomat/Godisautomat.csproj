@@ -181,6 +181,18 @@
     <Compile Include="Helpers\YAML\YamlFile.cs" />
     <Compile Include="Helpers\YAML\YamlHelper.cs" />
     <Compile Include="IoCComponents\Interfaces\ITaskManager.cs" />
+    <Compile Include="Pages\PaymentFailurePage.xaml.cs">
+      <DependentUpon>PaymentFailurePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PaymentSuccessPage.xaml.cs">
+      <DependentUpon>PaymentSuccessPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CashPaymentPage.xaml.cs">
+      <DependentUpon>CashPaymentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CardPaymentPage.xaml.cs">
+      <DependentUpon>CardPaymentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\BuyPage.xaml.cs">
       <DependentUpon>BuyPage.xaml</DependentUpon>
     </Compile>
@@ -202,7 +214,11 @@
     <Compile Include="ViewModels\BuyViewModel.cs" />
     <Compile Include="ViewModels\CandyDetailsViewModel.cs" />
     <Compile Include="ViewModels\CandyTypesViewModel.cs" />
+    <Compile Include="ViewModels\CardPaymentViewModel.cs" />
+    <Compile Include="ViewModels\CashPaymentViewModel.cs" />
     <Compile Include="ViewModels\CategoriesViewModel.cs" />
+    <Compile Include="ViewModels\PaymentFailureViewModel.cs" />
+    <Compile Include="ViewModels\PaymentSuccessViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Page Include="Controls\ButtonCandyType.xaml">
       <SubType>Designer</SubType>
@@ -242,6 +258,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\PaymentFailurePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PaymentSuccessPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CashPaymentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CardPaymentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\BuyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -322,7 +354,16 @@
     <Content Include="Images\ic_arrow_back_black_48px.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\ic_arrow_downward_black_48px.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\ic_cancel_black_48px.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ic_check_black_48px.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ic_loop_black_48px.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\ic_shopping_cart_black_48px.svg">

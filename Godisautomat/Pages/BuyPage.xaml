@@ -12,41 +12,44 @@
       x:Name="Page"
       mc:Ignorable="d" 
       d:DesignHeight="663" d:DesignWidth="1366">
-
     <Grid>
 
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+        <Grid>
 
-                <LinearGradientBrush.RelativeTransform>
-                    <TransformGroup>
-                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                        <RotateTransform Angle="290" CenterY="0.5" CenterX="0.5"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </LinearGradientBrush.RelativeTransform>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
 
-                <GradientStop Color="#8cd6f7" Offset="0"/>
-                <GradientStop Color="{StaticResource Main}" Offset="0.567"/>
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="290" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
 
-            </LinearGradientBrush>
-        </Grid.Background>
+                    <GradientStop Color="#8cd6f7" Offset="0"/>
+                    <GradientStop Color="{StaticResource Main}" Offset="0.567"/>
+
+                </LinearGradientBrush>
+            </Grid.Background>
 
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="270"/>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-        <Button Style="{StaticResource Cancel}"
+            <Button Style="{StaticResource Cancel}"
                 Grid.Row="1"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="20, 0, 0, 28"
+                    Width="260"
+                    Height="160"
+                Margin="20, 0, 0, 18"
                 Command="{Binding BackCommand}"/>
 
-        <Border Name="border"
+            <Border Name="border"
                 Grid.Row="1"
                 Grid.Column="1"
                 Margin="-270, 12, 0, 12"
@@ -56,21 +59,21 @@
                 BorderBrush="{StaticResource AccentBrush}"
                 Background="{StaticResource AccentBrush}">
 
-            <Grid>
+                <Grid>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80" />
-                    <RowDefinition Height="130" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="80" />
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="80" />
+                    </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Border Grid.Row="0"
+                    <Border Grid.Row="0"
                         Grid.ColumnSpan="2"
                         Margin="14, 12, 14, 0"
                         CornerRadius="8, 8, 0, 0"
@@ -78,47 +81,58 @@
                         BorderBrush="{StaticResource BackgroundBrush}"
                         Background="{StaticResource BackgroundBrush}">
 
-                    <Label Content="Pay"/>
+                        <Label Content="Pay"/>
 
-                </Border>
+                    </Border>
 
-                <Border Grid.Row="1"
+                    <Border Grid.Row="1"
                         Grid.ColumnSpan="2"
                         Width="236"
-                        Height="120"
+                        Height="130"
                         Margin="0, 10, 0, 0"
                         CornerRadius="0, 0, 8, 8"
                         BorderThickness="0"
                         BorderBrush="{StaticResource BackgroundBrush}"
                         Background="{StaticResource BackgroundBrush}">
+                        <StackPanel Orientation="Vertical">
 
-                    <Label Content="{Binding Type.Price, FallbackValue=20 kr}"
-                           FontSize="60"
-                           FontWeight="DemiBold"/>
+                            <Label Content="{Binding Amount, FallbackValue=200 g}"
+                               Margin="0"
+                               Padding="0"
+                               FontWeight="DemiBold"/>
 
-                </Border>
+                            <Label Content="{Binding TotalPrice, FallbackValue=20 kr}"
+                               FontSize="60"
+                               Margin="0, -6, 0, 0"
+                               Padding="0"
+                               FontWeight="DemiBold"/>
 
-                <Button Grid.Row="2"
+                        </StackPanel>
+                    </Border>
+
+                    <Button Grid.Row="2"
                         Grid.Column="1"
                         Margin="0, 16, 7, 0"
                         VerticalAlignment="Top"
+                        Command="{Binding CashCommand}"
                         Style="{StaticResource Payment}">
-                    <Image Source="../Images/cash.png"
+                        <Image Source="../Images/cash.png"
                            Stretch="Uniform"
                            Margin="16"/>
-                </Button>
+                    </Button>
 
-                <Button Grid.Row="2"
+                    <Button Grid.Row="2"
                         Grid.Column="0"
                         Margin="7, 16, 0, 0"
                         VerticalAlignment="Top"
+                        Command="{Binding CardCommand}"
                         Style="{StaticResource Payment}">
-                    <Image Source="../Images/credit-card.png"
+                        <Image Source="../Images/credit-card.png"
                            Stretch="Uniform"
                            Margin="16"/>
-                </Button>
+                    </Button>
 
-                <Border Grid.Row="3"
+                    <Border Grid.Row="3"
                         Grid.ColumnSpan="2"
                         Margin="14, 0, 14, 12"
                         CornerRadius="0, 0, 8, 8"
@@ -126,15 +140,24 @@
                         BorderBrush="{StaticResource BackgroundBrush}"
                         Background="{StaticResource BackgroundBrush}">
 
-                    <Label Content="Card or Cash"/>
+                        <Label Content="Card or Cash"/>
 
-                </Border>
+                    </Border>
 
-            </Grid>
+                </Grid>
 
-        </Border>
+            </Border>
 
+        </Grid>
+
+        <Grid x:Name="DarkeningGrid"
+              Background="Black"
+              Visibility="{Binding DarkeningGridVisibility}"
+              Opacity="{Binding DarkeningGridOpacity, FallbackValue=0}"/>
+
+        <c:PageHost x:Name="ModalHost"
+                    CurrentPage="{Binding CurrentModalPage}"
+                    CurrentPageViewModel="{Binding CurrentModalViewModel}" Margin="0,10,0.4,-9.8"/>
 
     </Grid>
-
 </local:BasePage>

@@ -28,8 +28,6 @@ namespace Godisautomat.Pages
         /// </summary>
         public CandyDetailsPage() : base()
         {
-            PageUnloadAnimation = Animation.PageAnimation.SlideInFromLeft;
-            PageLoadAnimation = Animation.PageAnimation.SlideInFromRight;
             InitializeComponent();
         }
 
@@ -38,8 +36,6 @@ namespace Godisautomat.Pages
         /// </summary>
         public CandyDetailsPage(CandyDetailsViewModel specificViewModel) : base(specificViewModel)
         {
-            PageUnloadAnimation = Animation.PageAnimation.SlideInFromLeft;
-            PageLoadAnimation = Animation.PageAnimation.SlideInFromRight;
             InitializeComponent();
         }
     }

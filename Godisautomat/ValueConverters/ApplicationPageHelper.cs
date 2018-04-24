@@ -39,6 +39,21 @@ namespace Godisautomat.ValueConverters
                 case ApplicationPage.Buy:
                     return new BuyPage(viewModel as BuyViewModel);
 
+                case ApplicationPage.ModalCardPayment:
+                    return new CardPaymentPage(viewModel as CardPaymentViewModel);
+
+                case ApplicationPage.ModalCashPayment:
+                    return new CashPaymentPage(viewModel as CashPaymentViewModel);
+
+                case ApplicationPage.ModalPaymentSuccess:
+                    return new PaymentSuccessPage(viewModel as PaymentSuccessViewModel);
+
+                case ApplicationPage.ModalPaymentFailure:
+                    return new PaymentFailurePage(viewModel as PaymentFailureViewModel);
+
+                case ApplicationPage.None:
+                    return new BasePage();
+
                 default:
                     Debugger.Break();
                     return null;
@@ -64,6 +79,21 @@ namespace Godisautomat.ValueConverters
 
             if (page is BuyPage)
                 return ApplicationPage.Buy;
+
+            if (page is CardPaymentPage)
+                return ApplicationPage.ModalCardPayment;
+
+            if (page is CashPaymentPage)
+                return ApplicationPage.ModalCashPayment;
+
+            if (page is PaymentSuccessPage)
+                return ApplicationPage.ModalPaymentSuccess;
+
+            if (page is PaymentFailurePage)
+                return ApplicationPage.ModalPaymentFailure;
+
+            if (page is BasePage)
+                return ApplicationPage.None;
 
             // Alert developer of issue
             Debugger.Break();

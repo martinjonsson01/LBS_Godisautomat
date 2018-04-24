@@ -26,12 +26,36 @@
               Width="1366"
               Height="768">
 
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="290" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+
+                    <GradientStop Color="#8cd6f7" Offset="0"/>
+                    <GradientStop Color="{StaticResource Main}" Offset="0.567"/>
+
+                </LinearGradientBrush>
+            </Grid.Background>
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="105" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <controls:TitleBar Grid.Row="0"/>
+
+            <Grid Grid.Row="0"
+                  Background="Black"
+                  Opacity="{Binding ApplicationViewModel.DarkeningGridOpacity,
+                                    FallbackValue=0,
+                                    Source={x:Static viewmodels:ViewModelLocator.Instance}}"/>
 
             <controls:PageHost Grid.Row="1"
             CurrentPage="{Binding ApplicationViewModel.CurrentPage,
@@ -46,6 +70,18 @@
 
         <Grid Grid.Column="2"
               Background="Black"/>
+
+        <Button Grid.Column="2"
+                Height="200"
+                Margin="20"
+                Command="{Binding ApplicationViewModel.BuyViewModel.PayCommand,
+                                    Source={x:Static viewmodels:ViewModelLocator.Instance}}"
+                Visibility="{Binding ApplicationViewModel.PayButtonVisibility,
+                                    FallbackValue=0,
+                                    Source={x:Static viewmodels:ViewModelLocator.Instance}}"
+                Style="{StaticResource NonUi}">
+            <Label Content="PAY" />
+        </Button>
 
     </Grid>
 </Window>

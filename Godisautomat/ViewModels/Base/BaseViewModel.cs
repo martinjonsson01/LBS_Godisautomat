@@ -1,4 +1,5 @@
-﻿using Godisautomat.Expressions;
+﻿using Godisautomat.Animation;
+using Godisautomat.Expressions;
 using PropertyChanged;
 using System;
 using System.ComponentModel;
@@ -16,6 +17,16 @@ namespace Godisautomat.ViewModels.Base
         /// The event that is fired when any child property changes its value
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
+
+        /// <summary>
+        /// The animation the play when the page is first loaded
+        /// </summary>
+        public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideInFromRight;
+
+        /// <summary>
+        /// The animation the play when the page is unloaded
+        /// </summary>
+        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideOutToLeft;
 
         /// <summary>
         /// Call this to fire a <see cref="PropertyChanged"/> event

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Godisautomat.ViewModels.Application
 {
@@ -27,7 +28,15 @@ namespace Godisautomat.ViewModels.Application
         public BaseViewModel CurrentPageViewModel { get; set; }
         
         public List<CandyCategory> CandyCategories { get; set; }
-        
+
+        public float DarkeningGridOpacity { get; set; } = 0.0f;
+
+        public Visibility PayButtonVisibility { get; set; } = Visibility.Hidden;
+
+        public BuyViewModel BuyViewModel { get; set; }
+
+        public Random Random { get; set; } = new Random();
+
         /// <summary>
         /// Navigates to the specified page
         /// </summary>

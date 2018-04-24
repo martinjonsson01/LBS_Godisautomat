@@ -1,4 +1,5 @@
-﻿using Godisautomat.DataModels;
+﻿using Godisautomat.Animation;
+using Godisautomat.DataModels;
 using Godisautomat.IoCComponents.Base;
 using Godisautomat.ViewModels.Base;
 using System;
@@ -43,7 +44,7 @@ namespace Godisautomat.ViewModels
 
         private async Task SelectCategoryAsync(object parameter)
         {
-            IoC.Application.GoToPage(ApplicationPage.CandyTypes);
+            IoC.Application.GoToPage(ApplicationPage.CandyTypes, new CandyTypesViewModel { PageLoadAnimation = PageAnimation.SlideInFromRight });
 
             await Task.Delay(1);
         }

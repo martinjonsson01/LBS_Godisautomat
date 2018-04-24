@@ -1,4 +1,5 @@
-﻿using Godisautomat.DataModels;
+﻿using Godisautomat.Animation;
+using Godisautomat.DataModels;
 using Godisautomat.IoCComponents.Base;
 using Godisautomat.ViewModels.Base;
 using System;
@@ -49,7 +50,8 @@ namespace Godisautomat.ViewModels
             Category = category;
 
             // Create commands
-            SelectCandyTypeCommand = new RelayParameterizedCommand(async (parameter) => await SelectCandyTypeAsync(parameter));
+            SelectCandyTypeCommand = new RelayParameterizedCommand(async (parameter) => 
+            await SelectCandyTypeAsync(parameter));
             BackCommand = new RelayCommand(() => Back());
         }
 
@@ -57,14 +59,15 @@ namespace Godisautomat.ViewModels
 
         private async Task SelectCandyTypeAsync(object parameter)
         {
-            IoC.Application.GoToPage(ApplicationPage.CandyDetails);
+            IoC.Application.GoToPage(ApplicationPage.CandyDetails, new CandyDetailsViewModel { PageLoadAnimation = PageAnimation.SlideInFromLeft, PageUnloadAnimation = PageAnimation.SlideOutToRight });
 
             await Task.Delay(1);
         }
 
         private void Back()
         {
-            IoC.Application.GoToPage(ApplicationPage.Categories);
+            PageUnloadAnimation = PageAnimation.SlideOutToRight;
+            IoC.Application.GoToPage(ApplicationPage.Categories, new CategoriesViewModel { PageLoadAnimation = PageAnimation.SlideInFromLeft });
         }
 
     }

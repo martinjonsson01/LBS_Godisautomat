@@ -23,6 +23,12 @@
     <Color x:Key="NegativeAccent">#F44336</Color>
     <SolidColorBrush x:Key="NegativeAccentBrush" Color="{StaticResource NegativeAccent}"/>
 
+    <Color x:Key="LessNegative">#fbc02d</Color>
+    <SolidColorBrush x:Key="LessNegativeBrush" Color="{StaticResource LessNegative}" />
+
+    <Color x:Key="LessNegativeDark">#bc9021</Color>
+    <SolidColorBrush x:Key="LessNegativeDarkBrush" Color="{StaticResource LessNegativeDark}" />
+
     <Color x:Key="Background">#FAFAFA</Color>
     <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource Background}"/>
 

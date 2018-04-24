@@ -17,14 +17,14 @@ using System.Windows.Shapes;
 namespace Godisautomat.Pages
 {
     /// <summary>
-    /// Interaction logic for BuyPage.xaml
+    /// Interaction logic for PaymentFailurePage.xaml
     /// </summary>
-    public partial class BuyPage : BasePage<BuyViewModel>
+    public partial class PaymentFailurePage : BasePage<PaymentFailureViewModel>
     {
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public BuyPage() : base()
+        public PaymentFailurePage() : base()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace Godisautomat.Pages
         /// <summary>
         /// Constructor with specific view model.
         /// </summary>
-        public BuyPage(BuyViewModel specificViewModel) : base(specificViewModel)
+        public PaymentFailurePage(PaymentFailureViewModel specificViewModel) : base(specificViewModel)
         {
             InitializeComponent();
         }

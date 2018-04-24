@@ -17,22 +17,22 @@ using System.Windows.Shapes;
 namespace Godisautomat.Pages
 {
     /// <summary>
-    /// Interaction logic for BuyPage.xaml
+    /// Interaction logic for PaymentSuccessPage.xaml
     /// </summary>
-    public partial class BuyPage : BasePage<BuyViewModel>
+    public partial class PaymentSuccessPage : BasePage<PaymentSuccessViewModel>
     {
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public BuyPage() : base()
+        public PaymentSuccessPage() : base()
         {
-            InitializeComponent();
+           InitializeComponent();
         }
 
         /// <summary>
         /// Constructor with specific view model.
         /// </summary>
-        public BuyPage(BuyViewModel specificViewModel) : base(specificViewModel)
+        public PaymentSuccessPage(PaymentSuccessViewModel specificViewModel) : base(specificViewModel)
         {
             InitializeComponent();
         }
