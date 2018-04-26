@@ -349,6 +349,9 @@
     <Resource Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\WarningMilk.jpg" />
+    <Content Include="Images\WarningNuts.jpg" />
+    <Content Include="Images\WarningWheat.jpg" />
     <Resource Include="Images\cash.png" />
     <Resource Include="Images\credit-card.png" />
     <Content Include="Images\ic_arrow_back_black_48px.svg">

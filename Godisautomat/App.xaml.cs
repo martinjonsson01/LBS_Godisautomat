@@ -86,6 +86,8 @@ namespace Godisautomat
                 {
                     // Go back to main screen.
                     IoC.Application.GoToPage(DataModels.ApplicationPage.Categories);
+                    IoC.Application.DarkeningGridOpacity = 0;
+                    IoC.Application.PayButtonVisibility = Visibility.Hidden;
                 }
             };
             IdleTimer.Start();

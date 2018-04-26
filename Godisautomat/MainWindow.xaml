@@ -13,7 +13,7 @@
         WindowState="Maximized"
         SnapsToDevicePixels="True"
         Background="Black"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" Height="1080" Width="1920" ResizeMode="NoResize">
     <Grid>
 
         <Grid.ColumnDefinitions>

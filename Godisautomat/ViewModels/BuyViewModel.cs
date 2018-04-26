@@ -96,11 +96,14 @@ namespace Godisautomat.ViewModels
                 IoC.Application.PayButtonVisibility = Visibility.Visible;
 
                 // 5% risk of not being successful.
-                bool successful = IoC.Application.Random.Next(19) != 1;
+                var rand = IoC.Application.Random.Next(2);
+                bool successful = rand != 1;
                 if (successful)
                     GoToModal(ApplicationPage.ModalPaymentSuccess, new PaymentSuccessViewModel(this));
                 else
                     GoToModal(ApplicationPage.ModalPaymentFailure, new PaymentFailureViewModel(this));
+
+                IoC.Application.PayButtonVisibility = Visibility.Hidden;
             });
 
             // Update application BuyViewModel property.

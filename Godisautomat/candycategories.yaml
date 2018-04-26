@@ -31,7 +31,7 @@ candycategories:
           5:
             name: "Milk Extract"
             allergic: true
-            warningimage: "../Images/WarningMilk.png"
+            warningimage: "../Images/WarningMilk.jpg"
           6: 
             name: "Flavourings"
             allergic: false
@@ -39,11 +39,11 @@ candycategories:
           7: 
             name: "May contain nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
           8: 
             name: "May contain wheat"
             allergic: false
-            warningimage: "../Images/WarningWheat.png"
+            warningimage: "../Images/WarningWheat.jpg"
         sizes:
           0:
             name: "50 g"
@@ -87,11 +87,11 @@ candycategories:
           6: 
             name: "May contain nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
           7: 
             name: "May contain wheat"
             allergic: false
-            warningimage: "../Images/WarningWheat.png"
+            warningimage: "../Images/WarningWheat.jpg"
         sizes:
           0:
             name: "50 g"
@@ -135,11 +135,11 @@ candycategories:
           6: 
             name: "Nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
           7: 
             name: "May contain wheat"
             allergic: false
-            warningimage: "../Images/WarningWheat.png"
+            warningimage: "../Images/WarningWheat.jpg"
         sizes:
           0:
             name: "50 g"
@@ -183,11 +183,11 @@ candycategories:
           6: 
             name: "May contain nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
           7: 
             name: "May contain wheat"
             allergic: false
-            warningimage: "../Images/WarningWheat.png"
+            warningimage: "../Images/WarningWheat.jpg"
         sizes:
           0:
             name: "50 g"
@@ -231,11 +231,11 @@ candycategories:
           6: 
             name: "May contain nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
           7: 
             name: "May contain wheat"
             allergic: false
-            warningimage: "../Images/WarningWheat.png"
+            warningimage: "../Images/WarningWheat.jpg"
         sizes:
           0:
             name: "50 g"
@@ -279,11 +279,11 @@ candycategories:
           6: 
             name: "May contain nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
           7: 
             name: "May contain wheat"
             allergic: false
-            warningimage: "../Images/WarningWheat.png"
+            warningimage: "../Images/WarningWheat.jpg"
         sizes:
           0:
             name: "50 g"
@@ -307,7 +307,7 @@ candycategories:
           0:
             name: "Nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
         sizes:
           0:
             name: "50 g"
@@ -327,7 +327,7 @@ candycategories:
           0:
             name: "Nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
         sizes:
           0:
             name: "50 g"
@@ -347,7 +347,7 @@ candycategories:
           0:
             name: "Nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
         sizes:
           0:
             name: "50 g"
@@ -367,7 +367,7 @@ candycategories:
           0:
             name: "Nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
         sizes:
           0:
             name: "50 g"
@@ -387,7 +387,7 @@ candycategories:
           0:
             name: "Nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
         sizes:
           0:
             name: "50 g"
@@ -407,7 +407,7 @@ candycategories:
           0:
             name: "Nuts"
             allergic: true
-            warningimage: "../Images/WarningPeanut.png"
+            warningimage: "../Images/WarningPeanut.jpg"
         sizes:
           0:
             name: "50 g"
@@ -519,7 +519,7 @@ candycategories:
           1: 
             name: "Wheat Flour"
             allergic: true
-            warningimage: "../Images/WarningWheat.png"
+            warningimage: "../Images/WarningWheat.jpg"
           2: 
             name: "Glucose Syrup"
             allergic: false
@@ -799,7 +799,7 @@ candycategories:
           2: 
             name: "Milk"
             allergic: true
-            warningimage: "../Images/WarningMilk.png"
+            warningimage: "../Images/WarningMilk.jpg"
         sizes:
           0:
             name: "50 g"
@@ -851,7 +851,7 @@ candycategories:
           7:
             name: "May Contain Milk"
             allergic: true
-            warningimage: "../Images/WarningMilk.png"
+            warningimage: "../Images/WarningMilk.jpg"
         sizes:
           0:
             name: "50 g"
@@ -943,7 +943,7 @@ candycategories:
           1: 
             name: "Wheat Glucose Syrup"
             allergic: true
-            warningimage: "../Images/WarningWheat.png"
+            warningimage: "../Images/WarningWheat.jpg"
           2: 
             name: "Hydrogenated Coconut Oil"
             allergic: false
