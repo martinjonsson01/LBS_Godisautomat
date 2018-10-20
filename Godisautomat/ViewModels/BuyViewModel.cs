@@ -35,7 +35,9 @@ namespace Godisautomat.ViewModels
             {
                 var priceString = Type.Price.Substring(0, Type.Price.Length - 3);
                 var price = int.Parse(priceString);
-                var totalPrice = price * Type.Sizes.IndexOf(Amount) + price;
+                var totalPrice = Math.Pow(price, Type.Sizes.IndexOf(Amount)) + price;
+                if (Amount == "9001 g")
+                    return "Bush did 9/11 kr";
                 return $"{totalPrice} kr";
             }
         }
@@ -43,6 +45,8 @@ namespace Godisautomat.ViewModels
         #endregion
 
         #region Commands
+
+        public ICommand CancelCommand { get; set; }
 
         public ICommand BackCommand { get; set; }
 
@@ -65,8 +69,13 @@ namespace Godisautomat.ViewModels
         {
             Type = type;
             Amount = amount;
-            
+
             // Create commands
+            CancelCommand = new RelayCommand(() =>
+            {
+                PageUnloadAnimation = PageAnimation.SlideOutToRight;
+                IoC.Application.GoToPage(ApplicationPage.Categories, new CategoriesViewModel { PageLoadAnimation = PageAnimation.SlideInFromLeft });
+            });
             BackCommand = new RelayCommand(() =>
             {
                 PageUnloadAnimation = PageAnimation.SlideOutToRight;
@@ -95,7 +104,7 @@ namespace Godisautomat.ViewModels
                 IoC.Application.DarkeningGridOpacity = 0.9f;
                 IoC.Application.PayButtonVisibility = Visibility.Visible;
 
-                // 5% risk of not being successful.
+                // 1/3 risk of not being successful.
                 var rand = IoC.Application.Random.Next(2);
                 bool successful = rand != 1;
                 if (successful)

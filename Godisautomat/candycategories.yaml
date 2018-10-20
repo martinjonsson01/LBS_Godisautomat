@@ -321,7 +321,7 @@ candycategories:
             name: "5000 g"
       pistachio:
         name: Pistachio Nuts
-        imageurl: http://www.a2zedbasket.com/wp-content/uploads/2017/02/Pista-Roasted-Regular.jpg
+        imageurl: https://http2.mlstatic.com/pistache-torrado-e-salgado-frutas-secas-1kg-D_NQ_NP_991120-MLB25542070931_042017-F.jpg
         price: "20 kr"
         ingredients:
           0:
@@ -534,6 +534,58 @@ candycategories:
             warningimage: ""
           5: 
             name: "Beef Gelatine"
+            allergic: false
+            warningimage: ""
+          6: 
+            name: "Corn Starch"
+            allergic: false
+            warningimage: ""
+          7: 
+            name: "Glycerol"
+            allergic: false
+            warningimage: ""
+          8: 
+            name: "Natural Colors"
+            allergic: false
+            warningimage: ""
+          9: 
+            name: "Fat Reduced Cocoa Powder"
+            allergic: false
+            warningimage: ""
+        sizes:
+          0:
+            name: "50 g"
+          1:
+            name: "200 g"
+          2:
+            name: "350 g"
+          3:
+            name: "500 g"
+          4:
+            name: "5000 g"
+      sweet:
+        name: Sweet Liquorice
+        imageurl: https://best5supplements.com/wp-content/uploads/2015/11/licorice-testosterone.jpg
+        price: "999 kr"
+        ingredients:
+          0:
+            name: "Cane Molasses"
+            allergic: false
+            warningimage: ""
+          1: 
+            name: "Wheat Flour"
+            allergic: true
+            warningimage: "../Images/WarningWheat.jpg"
+          2: 
+            name: "Glucose Syrup"
+            allergic: false
+            warningimage: ""
+          3: 
+            name: "Desiccated Coconut"
+            allergic: false
+            warningimage: ""
+          4: 
+            name: "Palm Oil"
             allergic: false
             warningimage: ""
           6: 
@@ -785,7 +837,7 @@ candycategories:
             name: "5000 g"
       fudge:
         name: Fudge Caramel
-        imageurl: http://www.momswhothink.com/images/stories/food/xCaramel_Fudge.jpg.pagespeed.ic.SfmtEcqdkz.jpg
+        imageurl: https://www.momswhothink.com/images/stories/food/Caramel_Fudge.jpg
         price: "3 kr"
         ingredients:
           0:
@@ -933,7 +985,7 @@ candycategories:
             name: "5000 g"
       mentos:
         name: Mentos
-        imageurl: https://www.candywarehouse.com/assets/item/regular/mentos-mint-candy-roll-126949.jpgflutter
+        imageurl: https://www.candywarehouse.com/assets/item/regular/mentos-mint-candy-roll-126949.jpg
         price: "7 kr"
         ingredients:
           0:

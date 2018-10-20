@@ -6,7 +6,7 @@
 
         <Setter Property="FontFamily" Value="Montserrat" />
         <Setter Property="FontSize" Value="48" />
-        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="FontWeight" Value="Light" />
         <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -19,7 +19,7 @@
 
         <Setter Property="FontFamily" Value="Montserrat" />
         <Setter Property="FontSize" Value="48" />
-        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="FontWeight" Value="Light" />
         <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />

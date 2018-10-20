@@ -40,14 +40,21 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
+            <Button Style="{StaticResource Back}"
+                    Grid.Row="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="20, 17, 0, 0"
+                    Command="{Binding BackCommand}"/>
+
             <Button Style="{StaticResource Cancel}"
-                Grid.Row="1"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left"
+                    Grid.Row="1"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left"
                     Width="260"
                     Height="160"
-                Margin="20, 0, 0, 18"
-                Command="{Binding BackCommand}"/>
+                    Margin="20, 0, 0, 18"
+                    Command="{Binding CancelCommand}"/>
 
             <Border Name="border"
                 Grid.Row="1"
@@ -86,53 +93,61 @@
                     </Border>
 
                     <Border Grid.Row="1"
-                        Grid.ColumnSpan="2"
-                        Width="236"
-                        Height="130"
-                        Margin="0, 10, 0, 0"
-                        CornerRadius="0, 0, 8, 8"
-                        BorderThickness="0"
-                        BorderBrush="{StaticResource BackgroundBrush}"
-                        Background="{StaticResource BackgroundBrush}">
-                        <StackPanel Orientation="Vertical">
+                            Grid.ColumnSpan="2"
+                            Width="236"
+                            Height="130"
+                            Margin="0, 10, 0, 0"
+                            CornerRadius="0, 0, 8, 8"
+                            BorderThickness="0"
+                            BorderBrush="{StaticResource BackgroundBrush}"
+                            Background="{StaticResource BackgroundBrush}">
+                        <Viewbox Margin="10, 0, 10, 10">
+                            <StackPanel Orientation="Vertical">
 
-                            <Label Content="{Binding Amount, FallbackValue=200 g}"
-                               Margin="0"
-                               Padding="0"
-                               FontWeight="DemiBold"/>
-
+                                <Label Content="{Binding Amount, FallbackValue=200 g}"
+                                        Margin="0"
+                                        Padding="0"
+                                        FontWeight="DemiBold"/>
                             <Label Content="{Binding TotalPrice, FallbackValue=20 kr}"
-                               FontSize="60"
-                               Margin="0, -6, 0, 0"
-                               Padding="0"
-                               FontWeight="DemiBold"/>
+                                       FontSize="60"
+                                       Padding="0"
+                                       FontWeight="DemiBold"/>
 
                         </StackPanel>
+                        </Viewbox>
                     </Border>
 
                     <Button Grid.Row="2"
-                        Grid.Column="1"
-                        Margin="0, 16, 7, 0"
-                        VerticalAlignment="Top"
-                        Command="{Binding CashCommand}"
-                        Style="{StaticResource Payment}">
-                        <Image Source="../Images/cash.png"
-                           Stretch="Uniform"
-                           Margin="16"/>
+                            Grid.RowSpan="2"
+                            Grid.Column="1"
+                            Height="370"
+                            Margin="16, 16, 7, 0"
+                            VerticalAlignment="Top"
+                            Command="{Binding CashCommand}"
+                            Style="{StaticResource Payment}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="../Images/cash.png" 
+                           Stretch="Uniform"/>
+                        </Button.Background>
+                        Cash
                     </Button>
 
                     <Button Grid.Row="2"
-                        Grid.Column="0"
-                        Margin="7, 16, 0, 0"
-                        VerticalAlignment="Top"
-                        Command="{Binding CardCommand}"
-                        Style="{StaticResource Payment}">
-                        <Image Source="../Images/credit-card.png"
-                           Stretch="Uniform"
-                           Margin="16"/>
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            Height="370"
+                            Margin="7, 16, 16, 0"
+                            VerticalAlignment="Top"
+                            Command="{Binding CardCommand}"
+                            Style="{StaticResource Payment}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="../Images/credit-card.png"
+                           Stretch="Uniform"/>
+                        </Button.Background>
+                        Card
                     </Button>
 
-                    <Border Grid.Row="3"
+                    <!--<Border Grid.Row="3"
                         Grid.ColumnSpan="2"
                         Margin="14, 0, 14, 12"
                         CornerRadius="0, 0, 8, 8"
@@ -142,7 +157,7 @@
 
                         <Label Content="Card or Cash"/>
 
-                    </Border>
+                    </Border>-->
 
                 </Grid>
 

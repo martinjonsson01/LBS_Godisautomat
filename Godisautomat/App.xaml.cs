@@ -49,7 +49,7 @@ namespace Godisautomat
         /// <param name="e"></param>
         protected override async void OnStartup(StartupEventArgs e)
         {
-            // Let the base application do what it needs
+            // Let the base application do what it needs.
             base.OnStartup(e);
 
             // Fix FPS.

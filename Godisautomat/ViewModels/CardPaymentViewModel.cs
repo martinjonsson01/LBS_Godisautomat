@@ -24,7 +24,9 @@ namespace Godisautomat.ViewModels
             {
                 var priceString = Type.Price.Substring(0, Type.Price.Length - 3);
                 var price = int.Parse(priceString);
-                var totalPrice = price * Type.Sizes.IndexOf(Amount) + price;
+                var totalPrice = Math.Pow(price, Type.Sizes.IndexOf(Amount)) + price;
+                if (Amount == "9001 g")
+                    return "Bush did 9/11 kr";
                 return $"{totalPrice} kr";
             }
         }

@@ -103,6 +103,7 @@
                                 <Viewbox>
                                     <TextBlock Name="textBlock_title"
                                                Padding="0"
+                                               FontWeight="Medium"
                                                VerticalAlignment="Center"
                                                HorizontalAlignment="Center"
                                                Text="{TemplateBinding Content}" />
@@ -283,6 +284,7 @@
                             <Viewbox>
                                 <TextBlock Name="textBlock_title"
                                                Padding="0"
+                                               FontWeight="Medium"
                                                VerticalAlignment="Center"
                                                HorizontalAlignment="Center"
                                                Text="{TemplateBinding Content}" />
@@ -385,18 +387,14 @@
     <Style x:Key="Payment" TargetType="{x:Type Button}">
 
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Width" Value="340" />
-        <Setter Property="Height" Value="300" />
+        <Setter Property="FontSize" Value="60" />
+        <Setter Property="FontFamily" Value="Montserrat" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ButtonBase}">
 
                     <Border Name="border"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
-                            Width="337"
-                            Height="250"
                             CornerRadius="8"
                             BorderThickness="0"
                             BorderBrush="{StaticResource PositiveBrush}"
@@ -414,7 +412,7 @@
                                 <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" 
-                                                        To="{StaticResource PositiveAccent}"
+                                                        To="{StaticResource AccentDark}"
                                                         Duration="0:0:0.15"/>
                                         <DoubleAnimation To="1.1" 
                                                          Duration="0" 
@@ -424,10 +422,6 @@
                                                          Duration="0"
                                                          Storyboard.TargetName="border"
                                                          Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)" />
-                                        <DoubleAnimation To="20"
-                                                         Duration="1"
-                                                         Storyboard.TargetName="dropshadow"
-                                                         Storyboard.TargetProperty="ShadowDepth" />
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
@@ -451,7 +445,48 @@
                                               ShadowDepth="8"/>
                         </Border.Effect>
 
-                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                        <Grid>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="98" />
+                            </Grid.RowDefinitions>
+
+                            <Border Grid.Row="0"
+                                    Margin="15, 15, 15, 0"
+                                    CornerRadius="8, 8, 0, 0"
+                                    BorderThickness="0"
+                                    Background="{TemplateBinding Background}"/>
+
+                            <Border Grid.Row="1"
+                                    Margin="0"
+                                    CornerRadius="0, 0, 8, 8"
+                                    BorderThickness="0"
+                                    BorderBrush="{StaticResource BackgroundBrush}"
+                                    Background="{StaticResource BackgroundBrush}">
+
+                                <!--<Label Name="label_title"
+                                       FontFamily="Montserrat"
+                                       FontWeight="Bold"
+                                       FontSize="50"
+                                       Padding="0"
+                                       Foreground="{StaticResource TextBrush}"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center" 
+                                       Content="{TemplateBinding Content}"/>-->
+                                <Viewbox Margin="8">
+                                    <TextBlock Name="textBlock_title"
+                                               Padding="0"
+                                               FontWeight="SemiBold"
+                                               Foreground="{StaticResource TextBrush}"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Text="{TemplateBinding Content}" />
+                                </Viewbox>
+
+                            </Border>
+
+                        </Grid>
 
                     </Border>
 
@@ -772,23 +807,51 @@
 
                         <Border.Effect>
                             <DropShadowEffect x:Name="dropshadow"
-                                              BlurRadius="16"
+                                              BlurRadius="32"
                                               Direction="270"
-                                              Opacity="0.7" 
+                                              Opacity="0.9" 
                                               RenderingBias="Quality"
-                                              ShadowDepth="8"/>
+                                              ShadowDepth="3"/>
                         </Border.Effect>
 
                         <Grid>
 
-                            <Label Content="{TemplateBinding Content}"
-                                   FontFamily="Montserrat"
-                                   FontSize="48"
-                                   FontWeight="DemiBold" 
-                                   Foreground="{StaticResource TextBrush}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Padding="0"/>
+                            <Grid HorizontalAlignment="Center"
+                                  VerticalAlignment="Center">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="72" />
+                                </Grid.ColumnDefinitions>
+
+                                <!--
+                                <Label Content="{TemplateBinding Content}"
+                                       FontFamily="Montserrat"
+                                       FontSize="48"
+                                       FontWeight="DemiBold" 
+                                       Foreground="{StaticResource TextBrush}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Padding="0"/>-->
+                                <Viewbox>
+                                    <TextBlock Name="textBlock_title"
+                                               Padding="0"
+                                               FontSize="48"
+                                               FontWeight="DemiBold" 
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Text="{TemplateBinding Content}" />
+                                </Viewbox>
+
+                                <svgc:SvgViewbox Grid.Column="1"
+                                                 Source="/Images/ic_play_arrow_black_48px.svg" 
+                                                 Margin="18">
+                                    <svgc:SvgViewbox.LayoutTransform>
+                                        <RotateTransform CenterX="0.5" CenterY="0.5" Angle="90"/>
+                                    </svgc:SvgViewbox.LayoutTransform>
+                                </svgc:SvgViewbox>
+
+                            </Grid>
 
                         </Grid>
 
@@ -868,14 +931,15 @@
 
                         <Grid>
 
-                            <Label Content="{TemplateBinding Content}"
-                                   FontFamily="Montserrat"
-                                   FontSize="48"
-                                   FontWeight="DemiBold" 
-                                   Foreground="{StaticResource TextBrush}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Padding="0"/>
+                            <Viewbox>
+                                <TextBlock Name="textBlock_title"
+                                           Padding="0"
+                                           FontSize="48"
+                                           FontWeight="DemiBold" 
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Text="{TemplateBinding Content}" />
+                            </Viewbox>
 
                         </Grid>
 
@@ -890,5 +954,5 @@
     <Style x:Key="NonUi" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="{StaticResource LessNegativeBrush}" />
     </Style>
-    
+
 </ResourceDictionary>

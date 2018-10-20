@@ -73,6 +73,7 @@
                             Margin="16, 150, 16, 0">
 
                     <Button Style="{StaticResource Weight}"
+                            FontWeight="DemiBold"
                             Command="{Binding WeightCommand}"
                             Content="{Binding CurrentAmount}"/>
 
@@ -82,13 +83,15 @@
                             Margin="0, 0, 0, -10"
                             Height="120"
                             Width="236">
-                        <Label Content="{Binding TotalPrice, FallbackValue=220 kr}"
-                           FontFamily="Montserrat"
-                           FontSize="60"
-                           FontWeight="DemiBold" 
-                           Foreground="{StaticResource TextBrush}"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"/>
+                        <Viewbox Margin="20">
+                            <Label Content="{Binding TotalPrice, FallbackValue=220 kr}"
+                                   FontFamily="Montserrat"
+                                   FontSize="60"
+                                   FontWeight="DemiBold" 
+                                   Foreground="{StaticResource TextBrush}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        </Viewbox>
                     </Border>
 
                     <Button Style="{StaticResource Buy}" 
@@ -105,39 +108,53 @@
                         CornerRadius="8" 
                         Padding="0"
                         Margin="190, 80, 80, 115">
-                    <StackPanel Orientation="Vertical">
+                    <Grid>
 
-                        <Button Style="{StaticResource WeightOption}"
+                        <StackPanel Orientation="Vertical">
+
+                            <Button Style="{StaticResource WeightOption}"
                                 Margin="4"
                                 Command="{Binding WeightCommand}"
                                 CommandParameter="{Binding Type.Sizes[0]}"
-                                Content="{Binding Type.Sizes[0]}"/>
+                                Content="{Binding Type.Sizes[0], FallbackValue=0 g}"/>
 
-                        <Button Style="{StaticResource WeightOption}"
+                            <Button Style="{StaticResource WeightOption}"
                                 Margin="4"
                                 Command="{Binding WeightCommand}"
                                 CommandParameter="{Binding Type.Sizes[1]}"
-                                Content="{Binding Type.Sizes[1]}"/>
+                                Content="{Binding Type.Sizes[1], FallbackValue=20 g}"/>
 
-                        <Button Style="{StaticResource WeightOption}"
+                            <Button Style="{StaticResource WeightOption}"
                                 Margin="4"
                                 Command="{Binding WeightCommand}"
                                 CommandParameter="{Binding Type.Sizes[2]}"
-                                Content="{Binding Type.Sizes[2]}"/>
+                                Content="{Binding Type.Sizes[2], FallbackValue=50 g}"/>
 
-                        <Button Style="{StaticResource WeightOption}"
+                            <Button Style="{StaticResource WeightOption}"
                                 Margin="4"
                                 Command="{Binding WeightCommand}"
                                 CommandParameter="{Binding Type.Sizes[3]}"
-                                Content="{Binding Type.Sizes[3]}"/>
+                                Content="{Binding Type.Sizes[3], FallbackValue=79 g}"/>
 
-                        <Button Style="{StaticResource WeightOption}"
+                            <Button Style="{StaticResource WeightOption}"
                                 Margin="4"
                                 Command="{Binding WeightCommand}"
                                 CommandParameter="{Binding Type.Sizes[4]}"
-                                Content="{Binding Type.Sizes[4]}"/>
+                                Content="{Binding Type.Sizes[4], FallbackValue=9999 g}"/>
 
-                    </StackPanel>
+                        </StackPanel>
+
+                        <Button Style="{StaticResource WeightOption}"
+                                Width="10"
+                                Height="5"
+                                VerticalAlignment="Bottom"
+                                HorizontalAlignment="Right"
+                                Margin="0"
+                                Command="{Binding WeightCommand}"
+                                CommandParameter="9001 g"
+                                Content="9001 g" />
+
+                    </Grid>
                 </Border>
 
                 <Border Grid.Column="1"
@@ -147,12 +164,12 @@
                         CornerRadius="8" 
                         Margin="16, 50, 0, 32">
 
-                    <ItemsControl ItemsSource="{Binding AllergicIngredients}">
+                    <ItemsControl ItemsSource="{Binding AllergicIngredients, Mode=OneWay}">
 
                         <ItemsControl.ItemTemplate>
                             <DataTemplate DataType="{x:Type dm:Ingredient}">
-                                <Image Source="{Binding WarningImagePath}" 
-                                       Margin="16"/>
+                                <Image Source="{Binding WarningImagePath, Mode=OneWay}" 
+                                       Margin="0"/>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                         
@@ -203,7 +220,7 @@
 
                         <TextBlock Name="label_title"
                                    FontFamily="Montserrat"
-                                   FontWeight="Bold"
+                                   FontWeight="Medium"
                                    FontSize="24"
                                    Padding="0"
                                    Margin="8, 16, 8, 8"
